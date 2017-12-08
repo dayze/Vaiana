@@ -11,9 +11,6 @@
   export default {
     components: {SearchForm},
     name: 'Home',
-    component: {
-      SearchForm
-    },
     data () {
       return {
         msg: 'Maxime se fait raketté ! =('
