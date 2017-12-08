@@ -1,24 +1,22 @@
 <template>
   <div>
     <navbar></navbar>
-    <!--<search-form></search-form>-->
+    <jumbo></jumbo>
   </div>
 </template>
 
 <script>
-  import SearchForm from '@/components/SearchForm'
   import Navbar from '@/components/Navbar'
+  import Jumbo from '@/components/Jumbo'
 
   export default {
     components: {
       Navbar,
-      SearchForm
+      Jumbo
     },
     name: 'Home',
     data () {
-      return {
-        msg: 'Maxime se fait raketté ! =('
-      }
+      return {}
     }
   }
 </script>

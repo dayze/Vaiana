@@ -1,30 +1,41 @@
 <template>
-  <div class="row bg-yang border-bottom border-silver flex-y-center padding" role="navigation">
+  <div class="row bg-yang flex-y-center padding" role="navigation">
+
+    <!-- MENU BURGER ICON -->
     <div class="cell-3 hide show-s" id="menuToggle">
       <input type="checkbox"/>
       <span></span>
       <span></span>
       <span></span>
     </div>
+
+    <!-- LOGO -->
     <div class="cell-6 align-left align-center-s">
-      <h1 class="txt-unset txt-size-medium txt-size-normal-xs txt-upper">Booking Day</h1>
+      <h1 class="transition-3 txt-unset txt-size-big txt-size-normal-xs txt-upper">
+        <a href="/" class="inline-block" title="Accueil">Booking Day</a>
+      </h1>
     </div>
+
+    <!-- MENU LIST -->
     <div class="cell-6 align-right hide-s">
       <ul class="list-unstyled list-inline list-separator">
         <li class="border-orange">
-          <a class="hover-color-orange" href="#" title="Mon Compte">Mon compte</a>
+          <a class="hover-color-pumpkin" href="#" title="Mon Compte">Mon compte</a>
         </li>
         <li class="border-orange">
-          <a class="hover-color-orange" href="#" title="A propos">A propos</a>
+          <a class="hover-color-pumpkin" href="#" title="A propos">A propos</a>
         </li>
         <li class="border-orange">
-          <a class="hover-color-orange" href="#" title="Contact">Contact</a>
+          <a class="hover-color-pumpkin" href="#" title="Contact">Contact</a>
         </li>
       </ul>
     </div>
+
+    <!-- SEARCH ICON -->
     <div class="cell-3 hide show-s align-right">
-      <img class="responsive-img" src="../assets/icons/search.svg"/>
+      <img class="responsive-img cursor-pointer" src="../assets/icons/search.svg"/>
     </div>
+
   </div>
 </template>
 
