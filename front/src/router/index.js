@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/pages/Home'
-import SearchResults from '@/components/pages/Searchresults'
+import SearchResults from '@/components/pages/SearchResults'
 
 Vue.use(Router)
 
