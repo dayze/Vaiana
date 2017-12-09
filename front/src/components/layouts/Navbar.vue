@@ -11,7 +11,7 @@
 
     <!-- LOGO -->
     <div class="cell-5 c-6-s align-left align-center-s">
-      <h1 class="transition-3 txt-unset txt-size-big txt-size-normal-xs txt-upper">
+      <h1 class="transition-3 margin-0 txt-unset txt-size-big txt-size-normal-xs txt-upper">
         <a href="/" class="inline-block" title="Accueil">Booking Day</a>
       </h1>
     </div>

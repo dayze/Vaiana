@@ -10,7 +10,7 @@
     </div>
 
     <div class="field-box">
-      <input type="submit" value="Search"
+      <input type="submit" value="Trouver une chambre"
              class="border-none bg-pumpkin color-yang cursor-pointer hover-bg-carrot transition-3"/>
     </div>
 
