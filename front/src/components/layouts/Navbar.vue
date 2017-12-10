@@ -36,7 +36,7 @@
 
     <!-- SEARCH ICON -->
     <div class="cell-3 hide show-s align-right">
-      <img class="responsive-img cursor-pointer" src="../../assets/icons/search.svg"/>
+      <img id="search-icon" class="responsive-img cursor-pointer" src="../../assets/icons/search.svg"/>
     </div>
 
   </div>
@@ -50,7 +50,7 @@
 
 <style>
 
-  img {
+  #search-icon {
     max-width: 25px;
   }
 
