@@ -24,7 +24,7 @@ module.exports = {
     useEslint: true,
     // If true, eslint errors and warnings will also be shown in the error overlay
     // in the browser.
-    showEslintErrorsInOverlay: false,
+    showEslintErrorsInOverlay: true,
 
     /**
      * Source Maps
@@ -53,7 +53,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: path.resolve('/~dez/vaiana/front/dist/'),
 
     /**
      * Source Maps

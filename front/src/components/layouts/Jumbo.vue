@@ -25,7 +25,7 @@
 <style scoped>
   #jumbo {
     /* background-position-y: -150px;*/
-    background: url(../../assets/media/img/pexels-photo-271639.jpeg) fixed center;
+    background: url('../../assets/media/img/pexels-photo-271639.jpeg') fixed center;
     min-height: 400px;
     background-size: cover;
   }
