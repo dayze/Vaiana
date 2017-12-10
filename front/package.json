@@ -11,6 +11,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "dotenv": "^4.0.0",
     "magic-monkey": "^1.0.33",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"

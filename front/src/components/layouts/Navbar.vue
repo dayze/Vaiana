@@ -48,7 +48,7 @@
   }
 </script>
 
-<style scoped>
+<style>
 
   img {
     max-width: 25px;
