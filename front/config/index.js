@@ -53,7 +53,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: path.resolve('/~dez/vaiana/front/dist/'),
+    assetsPublicPath: path.resolve('/var/www/html/project/front/dist/'),
 
     /**
      * Source Maps
