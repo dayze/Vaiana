@@ -1,10 +1,9 @@
 <template>
-  <div id="jumbo" class="padding-50-top-bottom">
-    <div class="row flex-x-center">
+  <div id="jumbo">
+    <div class="blur flex flex-column flex-y-center flex-x-center padding-50">
+      <h1>Réservez dès maintenant une chambre d'hôtel en journée</h1>
       <div
-        class="cell-4 c-6-xl c-8-l c-10-m c-12-s anim-forward padding bg-yang-opac-8 round align-center transition-3 shaded-box">
-        <h1 class="margin-0 margin-15-bottom txt-size-big txt-size-medium-s transition-3 txt-unset">
-          Une chambre pour la journée ?</h1>
+        class="anim-forward padding round align-center transition-3">
         <search-form></search-form>
       </div>
     </div>
@@ -25,8 +24,23 @@
 <style scoped>
   #jumbo {
     /* background-position-y: -150px;*/
-    background: url(../../assets/media/img/pexels-photo-271639.jpeg) fixed center;
     min-height: 400px;
+    height: 100vh;
     background-size: cover;
+    background: url(../../assets/media/img/pexels-photo-271639.jpeg) fixed center;
+  }
+
+  #jumbo h1 {
+    text-align: center;
+    color: white;
+    font-weight: lighter;
+    text-transform: uppercase;
+  }
+
+  .blur {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    padding-top: 74px;
   }
 </style>

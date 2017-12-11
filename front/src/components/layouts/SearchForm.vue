@@ -1,9 +1,9 @@
 <template>
   <form method="post" class="flex-form styled-form padding padding-0-bottom">
-
     <div class="field-box">
-      <input type="text" name="localisation" placeholder="Caen" required="required">
+      <input type="text" name="localisation" placeholder="Caen" required="required" v-model="city">
     </div>
+    <input type="checkbox" v-model="check1">
 
     <div class="field-box">
       <input type="date" name="date" required="required">
@@ -22,8 +22,19 @@
 <script>
   export default {
     name: 'SearchForm',
+    mounted () {
+      console.log('coucou')
+    },
     data () {
-      return {}
+      return {
+        city: '',
+        check1: true
+      }
+    },
+    method: {
+      send () {
+
+      }
     }
   }
 </script>
