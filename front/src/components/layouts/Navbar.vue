@@ -1,5 +1,5 @@
 <template>
-  <div class="row bg-yang flex-y-center" role="navigation">
+  <div class="row bg-yang flex-y-center fixed-row-top" role="navigation">
 
     <!-- MENU BURGER ICON -->
     <div class="cell-3 hide show-s" id="menuToggle">

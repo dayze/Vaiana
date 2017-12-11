@@ -1,7 +1,6 @@
 <template>
   <div>
     <jumbo></jumbo>
-    <h1>accueil</h1>
   </div>
 </template>
 
