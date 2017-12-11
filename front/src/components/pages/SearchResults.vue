@@ -1,9 +1,6 @@
 <template>
   <div>
-    <div class="bg-clouds padding">
-      search fixed ?
-    </div>
-
+    <search-filters></search-filters>
     <!-- ROOM 1 -->
     <div
       class="row-column-xs container margin-auto border-bottom border-silver padding-50-top-bottom flex-y-center flex-y-stretch-xs flex-x-center align-center-m">
@@ -168,10 +165,12 @@
 
 <script>
   import StarRatings from '../modules/StarRatings.vue'
+  import SearchFilters from '../layouts/SearchFilters.vue'
 
   export default {
     components: {
-      StarRatings
+      StarRatings,
+      SearchFilters
     },
     name: 'SearchResults',
     data () {
