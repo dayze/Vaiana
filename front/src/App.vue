@@ -2,7 +2,9 @@
   <div id="app">
     <!-- load header -->
     <navbar></navbar>
-    <router-view/>
+    <main>
+      <router-view/>
+    </main>
   </div>
 </template>
 
@@ -13,6 +15,13 @@
     components: {
       Navbar
     },
-    name: 'app'
+    name: 'app',
+    mounted: function () {
+      this.$nextTick(function () {
+        let nav = document.querySelector('div[role=navigation]')
+        let main = document.querySelector('main')
+        main.style.marginTop = nav.offsetHeight + 'px'
+      })
+    }
   }
 </script>

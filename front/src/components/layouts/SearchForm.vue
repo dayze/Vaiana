@@ -3,8 +3,6 @@
     <div class="field-box">
       <input type="text" name="localisation" placeholder="Caen" required="required" v-model="city">
     </div>
-    <input type="checkbox" v-model="check1">
-
     <div class="field-box">
       <input type="date" name="date" required="required">
     </div>
