@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <carousel :navigationEnabled="true" :perPageCustom="[[300, 1], [768, 3], [1024, 4]]">
-      <slide v-for="image in this.images">
+      <slide v-for="image in this.images" :key="image.id">
         <div class="slide">
           <a href="https://placeholder.com">
             <img class="responsive-img" src="http://via.placeholder.com/350x150">
@@ -21,12 +21,9 @@
       Slide
     },
     name: 'CarouselComponent',
-    props: {images: []},
+    props: {images: Array},
     data () {
       return {}
-    },
-    mounted () {
-      // console.log(this.images)
     }
   }
 </script>
