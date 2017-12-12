@@ -2,13 +2,15 @@
   <div class="container">
     <carousel :navigationEnabled="true" :perPageCustom="[[300, 1], [1024, 2]]">
       <slide v-for="hotel in this.hotels" :key="hotel.id">
-        <div class="slide">
-          <div class="absolute-row-top bg-clouds-opac-7 align-left margin">
-            <p class="margin-5 color-deep-blue">{{hotel.name}} - {{hotel.city}}</p>
-            <p class="txt-size-small margin-5 color-deep-blue">Very attracive price</p>
+        <router-link :to="{ path: 'results' }">
+          <div class="slide">
+            <div class="absolute-row-top bg-clouds-opac-7 align-left margin">
+              <p class="margin-5 color-deep-blue">{{hotel.name}} - {{hotel.city}}</p>
+              <p class="txt-size-small margin-5 color-deep-blue">Very attracive price</p>
+            </div>
+            <img class="responsive-img" :src="getImgUrl(hotel)">
           </div>
-          <img class="responsive-img" :src="getImgUrl(hotel)">
-        </div>
+        </router-link>
       </slide>
     </carousel>
   </div>
