@@ -1,9 +1,9 @@
 <template>
   <div id="wrapper" class="">
-    <div id="filters" class="fixed">
+    <!--<div id="filters" class="fixed">
       <search-filters-mobile></search-filters-mobile>
       <search-filters-desktop></search-filters-desktop>
-    </div>
+    </div>-->
     <div id="results">
       <!-- ROOM 1 -->
       <div

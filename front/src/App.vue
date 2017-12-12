@@ -20,7 +20,10 @@
       this.$nextTick(function () {
         let nav = document.querySelector('div[role=navigation]')
         let main = document.querySelector('main')
-        main.style.marginTop = nav.offsetHeight + 'px'
+        let home = document.querySelector('main #home')
+        if (home === null) {
+          main.style.marginTop = nav.offsetHeight + 'px'
+        }
       })
     }
   }
