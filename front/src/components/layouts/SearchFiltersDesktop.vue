@@ -30,7 +30,6 @@
         <li><input id="price-max" type="number" placeholder="max"/></li>
       </div>
     </ul>
-    <button v-on:click="">Filtrer</button>
     </form>
   </div>
 </template>

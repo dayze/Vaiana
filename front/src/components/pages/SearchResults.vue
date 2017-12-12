@@ -1,7 +1,6 @@
 <template>
 
   <div class="wrapper">
-
     <!--<search-filters-mobile></search-filters-mobile>-->
     <div class="" id="filters">
       <search-filters-desktop></search-filters-desktop>
@@ -191,6 +190,8 @@
 <style>
   .wrapper{
     display: flex;
+    margin-top: 68px;
+    padding-top: 20px;
   }
 
   #results {
