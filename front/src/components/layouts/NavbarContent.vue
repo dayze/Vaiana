@@ -15,7 +15,7 @@
         <a class="hover-color-pumpkin" href="#" title="Contact">Contact</a>
       </li>
       <li class="padding-s bg-sky-s border-yang">
-        <a class="hover-color-pumpkin" href="#" @click="toggle()" title="Connexion">Se connecter</a>
+        <a class="hover-color-pumpkin" @click="toggle()" title="Connexion">Se connecter</a>
       </li>
     </ul>
     <template v-if="isModalUserOpen">
