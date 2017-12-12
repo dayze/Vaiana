@@ -1,10 +1,12 @@
 <template>
-  <div id="wrapper" class="">
-    <!--<div id="filters" class="fixed">
-      <search-filters-mobile></search-filters-mobile>
+
+  <div class="wrapper">
+
+    <!--<search-filters-mobile></search-filters-mobile>-->
+    <div class="" id="filters">
       <search-filters-desktop></search-filters-desktop>
-    </div>-->
-    <div id="results">
+    </div>
+    <div class="" id="results">
       <!-- ROOM 1 -->
       <div
         class="row-column-xs container margin-auto border-bottom border-silver padding-50-top-bottom flex-y-center flex-y-stretch-xs flex-x-center align-center-m">
@@ -187,13 +189,14 @@
 </script>
 
 <style>
-  #wrapper {
-    padding-top: 74px;
+  .wrapper{
+    display: flex;
   }
 
   #results {
-    margin-left: 210px;
-    margin-right: 10px;
+    flex: 1;
+    margin-left: 5px;
+    margin-right: 5px;
   }
 
   @media screen and (max-width: 768px) {
