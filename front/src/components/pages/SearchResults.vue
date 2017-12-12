@@ -1,9 +1,11 @@
 <template>
-  <div id="wrapper" class="">
-    <!--<div id="filters" class="fixed">
-      <search-filters-mobile></search-filters-mobile>
+
+  <div class="wrapper">
+    <!--<search-filters-mobile></search-filters-mobile>-->
+    <div class="" id="filters">
       <search-filters-desktop></search-filters-desktop>
-    </div>-->
+    </div>
+
     <div id="results" class="container margin-auto">
       <!-- ROOM 1 -->
       <div
@@ -185,3 +187,23 @@
     }
   }
 </script>
+
+<style>
+  .wrapper{
+    display: flex;
+    margin-top: 68px;
+    padding-top: 20px;
+  }
+
+  #results {
+    flex: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  @media screen and (max-width: 768px) {
+    #results {
+      margin-left: 10px;
+    }
+  }
+</style>

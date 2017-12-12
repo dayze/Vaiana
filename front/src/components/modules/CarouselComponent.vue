@@ -4,7 +4,7 @@
       <slide v-for="image in this.images" :key="image.id">
         <div class="slide">
           <a href="https://placeholder.com">
-            <img class="responsive-img" src="http://via.placeholder.com/350x150">
+            <img class="responsive-img" :src="getImgUrl(image)">
           </a>
         </div>
       </slide>
@@ -24,6 +24,14 @@
     props: {images: Array},
     data () {
       return {}
+    },
+    mounted () {
+      console.log(this.images)
+    },
+    methods: {
+      getImgUrl (image) {
+        return require('../../assets/media/fake/promoHotels/hotel-promo' + image.id + '.jpg')
+      }
     }
   }
 </script>

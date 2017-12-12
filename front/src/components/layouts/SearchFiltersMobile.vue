@@ -1,7 +1,7 @@
 <template>
-  <div class="show-s hide sticky" id="filter">
+  <!--<div class="show-s hide fixed" id="filter">
     <button class="padding bg-peter-river color-clouds">Voir les filtres</button>
-  </div>
+  </div>-->
 </template>
 
 <script>
