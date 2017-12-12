@@ -1,27 +1,25 @@
 <template>
-  <div>
+  <div class="cell-3 hide show-s" id="menuToggle">
+    <input type="checkbox" v-model="isChecked" @click="toggle()"/>
+    <span></span>
+    <span></span>
+    <span></span>
     <div id="menuBurger" :class="{move: !isChecked}" class="transition-2">
-        <div class="align-right padding cursor-pointer" @click="toggle()">X</div>
-        <navbar-content></navbar-content>
+      <div class="align-left padding cursor-pointer" @click="toggle()">X</div>
+      <navbar-content></navbar-content>
     </div>
-    <div class="cell-3 hide show-s" id="menuToggle">
-      <input type="checkbox" v-model="isChecked" @click="toggle()"/>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-
   </div>
+
 </template>
 
 <script>
   import NavbarContent from '../layouts/NavbarContent.vue'
+
   export default {
     components: {NavbarContent},
     data () {
       return {
-        isChecked: false
+        isChecked: true
       }
     },
     methods: {
@@ -33,17 +31,20 @@
 </script>
 
 <style>
-  .move {
-    left: -200px;
+  #menuBurger.move {
+    left: -15px;
   }
+
   #menuBurger {
     top: 0;
     height: 100vh;
-    width: 200px;
+    width: 100vw;
     position: absolute;
     background-color: #fff;
     z-index: 1;
+    left: calc(-100vw - 15px);
   }
+
   #menuToggle {
     /*display: block;*/
     position: relative;

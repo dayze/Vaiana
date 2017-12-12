@@ -29,7 +29,17 @@
 
   export default {
     components: {BurgerMenu, NavbarContent},
-    name: 'Navbar'
+    name: 'Navbar',
+    data () {
+      return {
+        isChecked: false
+      }
+    },
+    methods: {
+      toggle () {
+        this.isChecked = !this.isChecked
+      }
+    }
   }
 </script>
 
