@@ -1,8 +1,8 @@
 <template>
   <div id="home">
     <jumbo></jumbo>
-    <carousel-component :message="this.images"></carousel-component>
-    <carousel-component :message="this.images"></carousel-component>
+    <carousel-component :images="this.images"></carousel-component>
+    <carousel-component :images="this.images"></carousel-component>
   </div>
 </template>
 
@@ -18,12 +18,11 @@
     name: 'Home',
     data () {
       return {
-        images: []
+        images: [{message: 'Message 1'}, {message: 'Message 2'}]
       }
     },
-    mounted () {
-      this.images.push({message: 'Message 1'})
-      this.images.push({message: 'Message 2'})
+    created () {
+      console.log(this.images)
     }
   }
 </script>

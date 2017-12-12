@@ -21,12 +21,12 @@
       Slide
     },
     name: 'CarouselComponent',
-    props: {message: String},
+    props: {images: []},
     data () {
       return {}
     },
     mounted () {
-      console.log(this.images)
+      // console.log(this.images)
     }
   }
 </script>

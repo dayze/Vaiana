@@ -20,13 +20,9 @@
 <script>
   export default {
     name: 'SearchForm',
-    mounted () {
-      console.log('coucou')
-    },
     data () {
       return {
-        city: '',
-        check1: true
+        city: ''
       }
     },
     method: {
