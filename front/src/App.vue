@@ -21,8 +21,8 @@
       googleMap.setAttribute('src',"https://maps.googleapis.com/maps/api/js")
       document.head.appendChild(googleMap)
     }, */
-    mounted () {
-      this.$nextTick(() => {
+    mounted: function () {
+      this.$nextTick(function () {
         let nav = document.querySelector('div[role=navigation]')
         let main = document.querySelector('main')
         let home = document.querySelector('main #home')
