@@ -39,9 +39,9 @@
 </script>
 <style>
   #filter-desktop {
-    width: 210px;
     float: left;
-    padding: 0 0 0 25px;
+    margin: auto;
+    padding: 25px;
     border-right: 1px solid #BDC3C7;
   }
 

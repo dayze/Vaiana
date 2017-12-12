@@ -28,3 +28,12 @@
     }
   }
 </script>
+
+<style>
+  body {
+    font-size: 1.05em;
+  }
+  input, a {
+    border-radius: 5px;
+  }
+</style>

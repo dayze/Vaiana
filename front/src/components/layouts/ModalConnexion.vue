@@ -1,7 +1,7 @@
 <template>
   <div id="modal">
     <spinner :active="false"></spinner>
-    <div id="modal-content">
+    <div id="modal-content" class="round-5">
       <span class="cursor-pointer" @click="close()">X</span>
       <form method="post" class="flex-form styled-form padding padding-0-bottom">
         <div class="field-box">

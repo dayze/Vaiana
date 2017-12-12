@@ -1,11 +1,13 @@
 <template>
   <div class="container">
-    <carousel :navigationEnabled="true" :perPageCustom="[[300, 1], [768, 3], [1024, 4]]">
-      <slide v-for="image in this.images" :key="image.id">
+    <carousel :navigationEnabled="true" :perPageCustom="[[300, 1], [1024, 2]]">
+      <slide v-for="hotel in this.hotels" :key="hotel.id">
         <div class="slide">
-          <a href="https://placeholder.com">
-            <img class="responsive-img" :src="getImgUrl(image)">
-          </a>
+          <div class="absolute-row-top bg-clouds-opac-7 align-left margin">
+            <p class="margin-5 color-deep-blue">{{hotel.name}} - {{hotel.city}}</p>
+            <p class="txt-size-small margin-5 color-deep-blue">Very attracive price</p>
+          </div>
+          <img class="responsive-img" :src="getImgUrl(hotel)">
         </div>
       </slide>
     </carousel>
@@ -21,16 +23,16 @@
       Slide
     },
     name: 'CarouselComponent',
-    props: {images: Array},
+    props: {hotels: Array},
     data () {
       return {}
     },
     mounted () {
-      console.log(this.images)
+      console.log(this.hotels)
     },
     methods: {
-      getImgUrl (image) {
-        return require('../../assets/media/fake/promoHotels/hotel-promo' + image.id + '.jpg')
+      getImgUrl (hotel) {
+        return require('../../assets/media/fake/promoHotels/hotel-promo' + hotel.id + '.jpg')
       }
     }
   }
@@ -43,7 +45,6 @@
     font-family: Arial;
     font-size: 24px;
     text-align: center;
-    min-height: 100px;
   }
 
   .container {

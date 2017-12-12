@@ -27,7 +27,7 @@
     min-height: 400px;
     height: 100vh;
     background-size: cover;
-    background: url(../../assets/media/img/pexels-photo-271639.jpeg) fixed center;
+    background: url(../../assets/media/img/pexels-photo-97904.jpeg) fixed center;
   }
 
   #jumbo h1 {
@@ -38,7 +38,7 @@
   }
 
   .blur {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
     height: 100%;
     padding-top: 74px;
