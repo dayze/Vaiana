@@ -4,16 +4,6 @@ import Home from '@/components/pages/Home'
 import SearchResults from '@/components/pages/SearchResults'
 import Detail from '@/components/pages/Detail'
 
-const VueGoogleMaps = require('vue2-google-maps')
-
-Vue.use(VueGoogleMaps, {
-  load: {
-    key: '',
-    v: '',
-    libraries: 'places'
-  }
-})
-
 Vue.use(Router)
 
 export default new Router({
