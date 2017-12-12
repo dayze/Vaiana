@@ -18,11 +18,11 @@
     name: 'Home',
     data () {
       return {
-        images: [{message: 'Message 1'}, {message: 'Message 2'}]
+        images: []
       }
     },
     created () {
-      console.log(this.images)
+      this.images.push({id: 1, path: 'Message 1'}, {id: 2, path: 'Message 2'})
     }
   }
 </script>

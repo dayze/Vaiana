@@ -13,7 +13,8 @@
           <figcaption>
             <div class="absolute-row-top bg-clouds-opac-7 align-left padding">
               <h1 class="margin-5">The Joshua Tree House</h1>
-              <svg xmlns="http://www.w3.org/2000/svg" class="APP_default_gray" width="20" height="20" viewBox="0 0 512 512">
+              <svg xmlns="http://www.w3.org/2000/svg" class="APP_default_gray" width="20" height="20"
+                   viewBox="0 0 512 512">
                 <path
                   d="M256 0C153.8 0 70.6 83.2 70.6 185.4c0 126.9 165.9 313.2 173 321 6.6 7.4 18.2 7.4 24.8 0 7.1-7.9 173-194.1 173-321C441.4 83.2 358.2 0 256 0zM256 278.7c-51.4 0-93.3-41.9-93.3-93.3S204.6 92.1 256 92.1s93.3 41.9 93.3 93.3S307.4 278.7 256 278.7z"/>
               </svg>
@@ -49,17 +50,23 @@
         </svg>
       </div>
     </div>
-    <div class="row-column-xs container margin-auto">
-      <div class="row cell-8">
-        <nav class="cell-12 border-bottom border-silver padding-10-top-bottom">
-          <ul class="list-inline list-unstyled">
-            <li class="link-active">Présentation</li>
-            <li>Commentaires</li>
-            <li>Contact</li>
-            <li>Emplacement</li>
-          </ul>
-        </nav>
+
+    <div class="container margin-auto">
+      <div class="row">
         <div class="cell-12">
+          <nav class="border-bottom border-silver padding-10-top-bottom">
+            <ul class="list-inline list-unstyled">
+              <li class="link-active">Présentation</li>
+              <li>Commentaires</li>
+              <li>Contact</li>
+              <li>Emplacement</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell-8">
           <h2>The Joshua Tree House</h2>
           <h3>Ouistreham</h3>
           <ul class="list-inline list-unstyled">
@@ -70,31 +77,63 @@
               2 lits (1 lit double et 1 lit simple)
             </li>
           </ul>
+          <p class="padding-10-top-bottom">
+            Quibus occurrere bene pertinax miles explicatis ordinibus parans hastisque feriens scuta qui habitus iram
+            pugnantium concitat et dolorem proximos iam gestu terrebat sed eum in certamen alacriter consurgentem
+            revocavere ductores rati intempestivum anceps subire certamen cum haut longe muri distarent, quorum tutela
+            securitas poterat in solido locari cunctorum.
+          </p>
         </div>
-        <p class="margin padding-10-top-bottom">
-          Quibus occurrere bene pertinax miles explicatis ordinibus parans hastisque feriens scuta qui habitus iram
-          pugnantium concitat et dolorem proximos iam gestu terrebat sed eum in certamen alacriter consurgentem
-          revocavere ductores rati intempestivum anceps subire certamen cum haut longe muri distarent, quorum tutela
-          securitas poterat in solido locari cunctorum.
-        </p>
-      </div>
-      <div class="cell-4 bg-clouds">
+
+        <div class="cell-4 bg-clouds">
+
+        </div>
 
       </div>
-      <div class="cell-12">
-        <!--<google-map name="example"></google-map>-->
+
+      <!-- MAP -->
+      <div class="row">
+        <div class="cell-12">
+          <div class="map-container">
+            <google-map-component :latitude="49.276656" :longitude="-0.2586579999999685"></google-map-component>
+          </div>
+        </div>
       </div>
+
+      <!-- Comments -->
+      <div class="row">
+        <div class="cell-12">
+
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="row">
+        <div class="cell-12">
+
+        </div>
+      </div>
+
+      <!-- Position -->
+      <div class="row">
+        <div class="cell-12">
+
+        </div>
+      </div>
+
     </div>
+
+
   </div>
 </template>
 
 <script>
-  /* import GoogleMap from '../modules/GoogleMap.vue' */
+  import GoogleMapComponent from '../modules/GoogleMap.vue'
 
   export default {
-    /* components: {
-      GoogleMap
-    }, */
+    components: {
+      GoogleMapComponent
+    },
     name: 'Detail',
     data () {
       return {}
@@ -128,5 +167,10 @@
 
   .link-active {
     color: #75B1A9;
+  }
+
+  .map-container {
+    width: 100%;
+    height: 50vh;
   }
 </style>
