@@ -16,11 +16,6 @@
       Navbar
     },
     name: 'app',
-    /* created() {
-      let googleMap = document.createElement('script')
-      googleMap.setAttribute('src',"https://maps.googleapis.com/maps/api/js")
-      document.head.appendChild(googleMap)
-    }, */
     mounted: function () {
       this.$nextTick(function () {
         let nav = document.querySelector('div[role=navigation]')
