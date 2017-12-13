@@ -1,8 +1,10 @@
 <template>
   <div id="home">
     <jumbo></jumbo>
-    <carousel-component :images="this.promoHotels"></carousel-component>
-    <carousel-component :images="this.promoHotels"></carousel-component>
+    <h2 class="align-center">Hôtels en promotion</h2>
+    <carousel-component :hotels="this.promoHotels"></carousel-component>
+    <h2 class="align-center">Derniers hôtels ajoutés</h2>
+    <carousel-component :hotels="this.newHotels"></carousel-component>
   </div>
 </template>
 
@@ -24,7 +26,20 @@
     },
     created () {
       for (let i = 1; i <= 6; i++) {
-        this.promoHotels.push({id: i, path: '../../assets/media/fake/promoHotels/hotel-promo' + i + '.jpg'})
+        this.promoHotels.push({
+          id: i,
+          name: 'Lorem ipsum',
+          city: 'Mimosa City',
+          path: '../../assets/media/fake/promoHotels/hotel-promo' + i + '.jpg'
+        })
+      }
+      for (let i = 1; i <= 6; i++) {
+        this.newHotels.push({
+          id: i,
+          name: 'Lorem ipsum',
+          city: 'Mimosa City',
+          path: '../../assets/media/fake/newHotels/hotel-new-' + i + '.jpg'
+        })
       }
     }
   }

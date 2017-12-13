@@ -45,13 +45,28 @@
 
 <style>
 
-<<<<<<< HEAD
+  <
+  <
+  <
+  <
+  <
+  <
+  <
+  HEAD
   #nav-bar {
-    z-index: 1001; /* gt 1000 for counter before and after magicmonkey */
-=======
-  #navbar{
+    z-index: 1001;
+
+  /* gt 1000 for counter before and after magicmonkey */
+  =
+  =
+  =
+  =
+  =
+  =
+  =
+  #navbar {
     border-bottom: 1px solid #BDC3C7;
->>>>>>> 8051209559c703d87bb902982061231e80ba01ae
+  > > > > > > > 8051209559 c703d87bb902982061231e80ba01ae
   }
 
   #search-icon {

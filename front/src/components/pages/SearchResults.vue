@@ -5,13 +5,14 @@
     <div class="" id="filters">
       <search-filters-desktop></search-filters-desktop>
     </div>
-    <div class="" id="results">
+
+    <div id="results" class="container margin-auto">
       <!-- ROOM 1 -->
       <div
         class="row-column-xs container margin-auto border-bottom border-silver padding-50-top-bottom flex-y-center flex-y-stretch-xs flex-x-center align-center-m">
         <div class="cell-5 c-7-m c-10-s">
           <figure>
-            <img class="responsive-img border-2 border-pumpkin"
+            <img class="responsive-img"
                  src="../../assets/media/fake/room1/pexels-photo-271618.jpeg"
                  alt="Image de chambre"/>
             <figcaption class="hide">
@@ -20,9 +21,9 @@
           </figure>
         </div>
         <div class="cell-7 c-10-m">
-          <ul class="list-unstyled color-pumpkin">
+          <ul class="list-unstyled color-green-lagoon">
             <li>
-              <h3 class="margin-0">Nom de l'hotel</h3>
+              <h2 class="margin-0">Nom de l'hotel</h2>
             </li>
             <li>
               <h3 class="margin-0">Adresse/ville</h3>
@@ -37,20 +38,20 @@
           </p>
           <div class="row-column-s flex-y-center flex-y-stretch-s align-center">
             <div class="cell-4">
-              <h4 class="margin-0 color-pumpkin">
+              <h4 class="margin-0 color-deep-blue">
                 <span class="color-wet-asphalt txt-unstyled margin-right">à partir de :</span>
                 <span class="txt-size-big">45</span>
                 <span>€</span>
               </h4>
             </div>
             <div class="cell-4">
-              <a href="#" class="bg-nephritis hover-bg-emerald padding-10 color-yang block align-center"
+              <a href="#" class="bg-sunglow hover-bg-yang border transition-3 border-sunglow hover-color-sunglow padding-10 color-yang block align-center"
                  title="Plus de détails">
                 Plus de détails
               </a>
             </div>
             <div class="cell-4">
-              <a href="#" class="bg-belize-hole hover-bg-peter-river padding-10 color-yang block align-center"
+              <a href="#" class="bg-sweet-potato hover-bg-yang border transition-3 border-sweet-potato hover-color-sweet-potato padding-10 color-yang block align-center"
                  title="Voir le calendrier">
                 Le calendrier
               </a>
@@ -65,7 +66,7 @@
         class="row-column-xs container margin-auto border-bottom border-silver padding-50-top-bottom flex-y-center flex-y-stretch-xs flex-x-center align-center-m">
         <div class="cell-5 c-7-m c-10-s">
           <figure>
-            <img class="responsive-img  border-2 border-pumpkin"
+            <img class="responsive-img"
                  src="../../assets/media/fake/room1/pexels-photo-271618.jpeg"
                  alt="Image de chambre"/>
             <figcaption class="hide">
@@ -74,9 +75,9 @@
           </figure>
         </div>
         <div class="cell-7 c-10-m">
-          <ul class="list-unstyled color-pumpkin">
+          <ul class="list-unstyled color-green-lagoon">
             <li>
-              <h3 class="margin-0">Nom de l'hotel</h3>
+              <h2 class="margin-0">Nom de l'hotel</h2>
             </li>
             <li>
               <h3 class="margin-0">Adresse/ville</h3>
@@ -91,20 +92,20 @@
           </p>
           <div class="row-column-s flex-y-center flex-y-stretch-s align-center">
             <div class="cell-4">
-              <h4 class="margin-0 color-pumpkin">
+              <h4 class="margin-0 color-deep-blue">
                 <span class="color-wet-asphalt txt-unstyled margin-right">à partir de :</span>
                 <span class="txt-size-big">45</span>
                 <span>€</span>
               </h4>
             </div>
             <div class="cell-4">
-              <a href="#" class="bg-nephritis hover-bg-emerald padding-10 color-yang block align-center"
+              <a href="#" class="bg-sunglow hover-bg-yang border transition-3 border-sunglow hover-color-sunglow padding-10 color-yang block align-center"
                  title="Plus de détails">
                 Plus de détails
               </a>
             </div>
             <div class="cell-4">
-              <a href="#" class="bg-belize-hole hover-bg-peter-river padding-10 color-yang block align-center"
+              <a href="#" class="bg-sweet-potato hover-bg-yang border transition-3 border-sweet-potato hover-color-sweet-potato padding-10 color-yang block align-center"
                  title="Voir le calendrier">
                 Le calendrier
               </a>
@@ -118,7 +119,7 @@
         class="row-column-xs container margin-auto border-bottom border-silver padding-50-top-bottom flex-y-center flex-y-stretch-xs flex-x-center align-center-m">
         <div class="cell-5 c-7-m c-10-s">
           <figure>
-            <img class="responsive-img  border-2 border-pumpkin"
+            <img class="responsive-img"
                  src="../../assets/media/fake/room1/pexels-photo-271618.jpeg"
                  alt="Image de chambre"/>
             <figcaption class="hide">
@@ -127,9 +128,9 @@
           </figure>
         </div>
         <div class="cell-7 c-10-m">
-          <ul class="list-unstyled color-pumpkin">
+          <ul class="list-unstyled color-green-lagoon">
             <li>
-              <h3 class="margin-0">Nom de l'hotel</h3>
+              <h2 class="margin-0">Nom de l'hotel</h2>
             </li>
             <li>
               <h3 class="margin-0">Adresse/ville</h3>
@@ -144,20 +145,20 @@
           </p>
           <div class="row-column-s flex-y-center flex-y-stretch-s align-center">
             <div class="cell-4">
-              <h4 class="margin-0 color-pumpkin">
+              <h4 class="margin-0 color-deep-blue">
                 <span class="color-wet-asphalt txt-unstyled margin-right">à partir de :</span>
                 <span class="txt-size-big">45</span>
                 <span>€</span>
               </h4>
             </div>
             <div class="cell-4">
-              <a href="#" class="bg-nephritis hover-bg-emerald padding-10 color-yang block align-center"
+              <a href="#" class="bg-sunglow hover-bg-yang border transition-3 border-sunglow hover-color-sunglow padding-10 color-yang block align-center"
                  title="Plus de détails">
                 Plus de détails
               </a>
             </div>
             <div class="cell-4">
-              <a href="#" class="bg-belize-hole hover-bg-peter-river padding-10 color-yang block align-center"
+              <a href="#" class="bg-sweet-potato hover-bg-yang border transition-3 border-sweet-potato hover-color-sweet-potato padding-10 color-yang block align-center"
                  title="Voir le calendrier">
                 Le calendrier
               </a>
