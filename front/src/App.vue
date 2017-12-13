@@ -14,6 +14,7 @@
 <script>
   import Navbar from '@/components/layouts/Navbar'
   import ModalConnexion from '@/components/layouts/ModalConnexion'
+  import Utils from '@/utils'
 
   export default {
     components: {
@@ -31,15 +32,10 @@
         this.isModalUserOpen = !this.isModalUserOpen
       }
     },
-    mounted: function () {
-      this.$nextTick(function () {
-        let nav = document.querySelector('div[role=navigation]')
-        let main = document.querySelector('main')
-        let home = document.querySelector('main #home')
-        if (home === null) {
-          main.style.marginTop = nav.offsetHeight + 'px'
-        }
-      })
+    mounted () {
+      console.log('A')
+      Utils.setMainMarginTop()
+      window.addEventListener('resize', Utils.setMainMarginTop)
     }
   }
 </script>
