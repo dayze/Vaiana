@@ -1,7 +1,7 @@
 <template>
 
   <div class="wrapper">
-    <!--<search-filters-mobile></search-filters-mobile>-->
+    <search-filters-mobile></search-filters-mobile>
     <div class="" id="filters">
       <search-filters-desktop></search-filters-desktop>
     </div>
@@ -191,14 +191,17 @@
 <style>
   .wrapper{
     display: flex;
-    margin-top: 68px;
-    padding-top: 20px;
+    padding-top: 10px;
   }
 
   #results {
     flex: 1;
     margin-left: 5px;
     margin-right: 5px;
+  }
+
+  #results > div:nth-child(2n) {
+    background: #ECF0F1;
   }
 
   @media screen and (max-width: 768px) {
