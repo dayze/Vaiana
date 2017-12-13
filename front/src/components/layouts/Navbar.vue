@@ -1,5 +1,5 @@
 <template>
-  <div class="row bg-yang flex-y-center fixed-row-top" id="navbar" role="navigation">
+  <div class="row bg-yang flex-y-center fixed-row-top" id="nav-bar" role="navigation">
 
     <!-- MENU BURGER ICON -->
     <burger-menu></burger-menu>
@@ -48,6 +48,7 @@
   #nav-bar {
     z-index: 1001;
   }
+
   /* gt 1000 for counter before and after magicmonkey */
 
   #navbar {
