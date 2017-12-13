@@ -8,18 +8,20 @@
     <main>
       <router-view/>
     </main>
-
+    <footer-layout></footer-layout>
   </div>
 </template>
 
 <script>
   import Navbar from '@/components/layouts/Navbar'
   import ModalConnexion from '@/components/layouts/ModalConnexion'
+  import FooterLayout from '@/components/layouts/FooterLayout'
 
   export default {
     components: {
       Navbar,
-      ModalConnexion
+      ModalConnexion,
+      FooterLayout
     },
     name: 'app',
     data () {

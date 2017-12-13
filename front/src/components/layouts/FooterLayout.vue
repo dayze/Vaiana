@@ -1,7 +1,6 @@
 <template>
-  <footer>
-
-    <h1>footer</h1>
+  <footer class="bg-deep-blue padding">
+    <h1 class="margin-0-bottom">voici le footer</h1>
   </footer>
 </template>
 
