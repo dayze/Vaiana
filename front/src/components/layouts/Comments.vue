@@ -1,5 +1,5 @@
 <template>
-  <div id="comments" class="row margin-bottom">
+  <div id="comments" class="row margin">
     <div v-for="person in persons" :key="person.id" class="cell-4 cell-12-m border-green-lagoon-bottom">
       <div class="comment">
         <div class="header flex flex-column flex-x-center flex-y-center">
