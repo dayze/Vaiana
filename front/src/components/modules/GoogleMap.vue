@@ -31,7 +31,7 @@
       longitude: Number
     },
     mounted () {
-      console.log(this.latitude)
+      // console.log(this.latitude)
     },
     data () {
       return {

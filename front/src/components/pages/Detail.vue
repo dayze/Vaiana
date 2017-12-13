@@ -216,13 +216,6 @@
         </div>
       </div>
 
-      <!-- Comments -->
-      <div id="comments" class="row">
-        <div class="cell-12">
-
-        </div>
-      </div>
-
       <!-- Contact -->
       <div id="contact" class="row">
         <div class="cell-12">
@@ -235,6 +228,9 @@
         </div>
       </div>
 
+      <!-- Comments -->
+      <comments :persons="this.persons"></comments>
+
     </div>
 
 
@@ -243,15 +239,18 @@
 
 <script>
   import GoogleMapComponent from '../modules/GoogleMap.vue'
+  import Comments from '../layouts/Comments'
 
   export default {
     components: {
-      GoogleMapComponent
+      GoogleMapComponent,
+      Comments
     },
     name: 'Detail',
     data () {
       return {
-        openMoreServices: false
+        openMoreServices: false,
+        persons: []
       }
     },
     methods: {
@@ -260,6 +259,15 @@
       },
       displayLess () {
         this.openMoreServices = false
+      }
+    },
+    created () {
+      for (let i = 1; i <= 3; i++) {
+        this.persons.push({
+          id: i,
+          name: 'Lorem ipsum',
+          path: '../../assets/media/fake/persons/person' + i + '.jpg'
+        })
       }
     }
   }
