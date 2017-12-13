@@ -1,6 +1,6 @@
 <template>
   <div id="comments" class="row margin-bottom">
-    <div v-for="person in persons" :key="person.id" class="cell-6 cell-12-m">
+    <div v-for="person in persons" :key="person.id" class="cell-4 cell-12-m border-green-lagoon-bottom">
       <div class="comment">
         <div class="header flex flex-column flex-x-center flex-y-center">
           <img :src="getImgUrl(person)" class="circle margin">
@@ -8,7 +8,7 @@
           <h4 class="margin">{{person.name}}</h4>
           <h5 class="margin">{{person.date}}</h5>
         </div>
-        <div class="Comment">
+        <div class="comment align-justify">
           {{person.comment}}
         </div>
       </div>

@@ -25,7 +25,7 @@
           <label class="required">Date de réservation</label>
           <input type="date" name="date" required="required">
         </div>
-        <div class="align-field-box">
+        <div class="align-field-box align-center">
           <label class="required">Heure de début</label>
           <input type="time" name="date" required="required">
           <label class="required">Heure de fin</label>
