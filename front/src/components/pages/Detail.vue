@@ -69,7 +69,7 @@
                 <a href="#contact" title="Contacter l'hôtel" class="hover-color-sky">Contact</a>
               </li>
               <li>
-                <a href="#map" title="Voir l'emplacement" class="hover-color-sky">Présentation</a>
+                <a href="#map" title="Voir l'emplacement" class="hover-color-sky">Emplacement</a>
               </li>
             </ul>
           </nav>
@@ -102,13 +102,13 @@
 
       </div>
 
-      <!-- Services -->
+      <!-- ### Services -->
       <div id="services" class="row">
         <div class="cell-12">
           <div class="tabset">
 
             <!-- Tab 1 -->
-            <input type="radio" name="tabset" id="tab1" aria-controls="equipments" checked>
+            <input type="radio" name="tabset" id="tab1" aria-controls="equipments" checked="checked">
             <label for="tab1" @click="displayLess()">Equipements</label>
 
             <!-- Tab 2 -->
@@ -162,16 +162,18 @@
                     <span class="margin-10-left">Sèche-cheveux</span>
                   </div>
                   <div class="cell-12">
-                    <span class="inline-block cursor-pointer" @click="displayMore">
+                    <div class="row margin-bottom" v-if="openMoreServices">
+                      <div class="cell-12-margin-0">
+                        coucou
+                      </div>
+                    </div>
+                    <span class="inline-block cursor-pointer hover-color-green-lagoon" @click="displayMore">
                        <span>Afficher plus d'équipements </span>
                     <svg viewBox="0 0 18 18" height="10px" width="10px">
                       <path
                         d="m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z"></path>
                     </svg>
                     </span>
-                  </div>
-                  <div class="cell-12" v-if="openMoreServices">
-                    coucou
                   </div>
                 </div>
 
@@ -210,16 +212,18 @@
                     <span class="margin-10-left">Baignoire bébé</span>
                   </div>
                   <div class="cell-12">
-                    <span class="inline-block cursor-pointer" @click="displayMore">
+                    <div class="row margin-bottom" v-if="openMoreServices">
+                      <div class="cell-12-margin-0">
+                        coucou
+                      </div>
+                    </div>
+                    <span class="inline-block cursor-pointer hover-color-green-lagoon" @click="displayMore">
                        <span>Afficher plus d'équipements </span>
                     <svg viewBox="0 0 18 18" height="10px" width="10px">
                       <path
                         d="m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z"></path>
                     </svg>
                     </span>
-                  </div>
-                  <div class="cell-12" v-if="openMoreServices">
-                    coucou
                   </div>
                 </div>
               </section>
