@@ -7,10 +7,10 @@
       <input type="date" name="date" required="required">
     </div>
 
-    <div class="field-box">
+    <div class="actions-box">
       <router-link :to="{ path: 'results' }">
         <input type="submit" value="Trouver une chambre"
-               class="border-none bg-pumpkin color-yang cursor-pointer hover-bg-carrot transition-3"/>
+               class="bg-sunglow color-yang cursor-pointer hover-bg-deep-blue transition-3"/>
       </router-link>
     </div>
 
