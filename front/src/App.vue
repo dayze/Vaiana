@@ -1,24 +1,36 @@
 <template>
   <div id="app">
     <!-- load header -->
-    <navbar></navbar>
+    <template v-if="isModalUserOpen">
+      <modal-connexion v-on:toggle="toggle()" :isOpen="isModalUserOpen"></modal-connexion>
+    </template>
+    <navbar v-on:toggle="toggle()"></navbar>
     <main>
       <router-view/>
     </main>
-    <footer></footer>
   </div>
 </template>
 
 <script>
   import Navbar from '@/components/layouts/Navbar'
-  import Footer from '@/components/layouts/Footer'
+  import ModalConnexion from '@/components/layouts/ModalConnexion'
 
   export default {
     components: {
       Navbar,
-      Footer
+      ModalConnexion
     },
     name: 'app',
+    data () {
+      return {
+        isModalUserOpen: false
+      }
+    },
+    methods: {
+      toggle () {
+        this.isModalUserOpen = !this.isModalUserOpen
+      }
+    },
     mounted: function () {
       this.$nextTick(function () {
         let nav = document.querySelector('div[role=navigation]')
@@ -36,6 +48,7 @@
   body {
     font-size: 1.05em;
   }
+
   input, a {
     border-radius: 5px;
   }

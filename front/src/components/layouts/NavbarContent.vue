@@ -18,28 +18,20 @@
         <a class="hover-color-pumpkin" @click="toggle()" title="Connexion">Se connecter</a>
       </li>
     </ul>
-    <template v-if="isModalUserOpen">
-      <modal-connexion v-on:close="toggle()" :isOpen="isModalUserOpen"></modal-connexion>
-    </template>
   </div>
 </template>
 
 <script>
-  import ModalConnexion from './ModalConnexion.vue'
-
   export default {
-    components: {ModalConnexion},
     data () {
-      return {
-        isModalUserOpen: false
-      }
+      return {}
     },
     methods: {
       toggle () {
-        console.log('toggle')
-        this.isModalUserOpen = !this.isModalUserOpen
+        this.$emit('toggle')
       }
     }
+
   }
 </script>
 

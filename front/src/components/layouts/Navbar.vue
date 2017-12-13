@@ -2,7 +2,7 @@
   <div class="row bg-yang flex-y-center fixed-row-top" id="navbar" role="navigation">
 
     <!-- MENU BURGER ICON -->
-    <burger-menu></burger-menu>
+    <burger-menu v-on:toggle="toggle()"></burger-menu>
 
     <!-- LOGO -->
     <div class="cell-5 c-6-s align-left align-center-s">
@@ -13,7 +13,7 @@
 
     <!-- MENU LIST -->
     <div class="cell-7 align-right hide-s" id="menuList">
-      <navbar-content></navbar-content>
+      <navbar-content v-on:toggle="toggle()"></navbar-content>
     </div>
     <!-- SEARCH ICON -->
     <div class="cell-3 hide show-s align-right">
@@ -31,13 +31,11 @@
     components: {BurgerMenu, NavbarContent},
     name: 'Navbar',
     data () {
-      return {
-        isChecked: false
-      }
+      return {}
     },
     methods: {
       toggle () {
-        this.isChecked = !this.isChecked
+        this.$emit('toggle')
       }
     }
   }
@@ -48,6 +46,7 @@
   #nav-bar {
     z-index: 1001;
   }
+
   /* gt 1000 for counter before and after magicmonkey */
 
   #navbar {
