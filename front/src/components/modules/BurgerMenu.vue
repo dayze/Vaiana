@@ -6,7 +6,7 @@
     <span></span>
     <div id="menuBurger" :class="{move: !isChecked}" class="transition-2">
       <div class="align-left padding cursor-pointer" @click="toggle()">X</div>
-      <navbar-content></navbar-content>
+      <navbar-content v-on:toggle="toggleModal()"></navbar-content>
     </div>
   </div>
 
@@ -25,6 +25,10 @@
     methods: {
       toggle () {
         this.isChecked = !this.isChecked
+      },
+      toggleModal () {
+        this.toggle()
+        this.$emit('toggle')
       }
     }
   }

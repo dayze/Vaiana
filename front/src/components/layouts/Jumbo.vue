@@ -1,6 +1,6 @@
 <template>
   <div id="jumbo">
-    <div class="blur flex flex-column flex-y-center flex-x-center padding-50">
+    <div class="blur flex flex-column flex-y-center flex-x-center padding-50 txt-size-small-xs transition-3">
       <h1>Réservez dès maintenant une chambre d'hôtel en journée</h1>
       <div
         class="anim-forward padding round align-center transition-3">

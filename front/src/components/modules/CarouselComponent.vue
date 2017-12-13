@@ -1,12 +1,12 @@
 <template>
-  <div class="container">
-    <carousel :navigationEnabled="true" :perPageCustom="[[300, 1], [1024, 2]]">
+  <div class="container margin-auto floats-box">
+    <carousel :navigationEnabled="true" :perPageCustom="[[300, 1], [1024, 2]]" paginationActiveColor="#E1B753">
       <slide v-for="hotel in this.hotels" :key="hotel.id">
         <router-link :to="{ path: 'results' }">
-          <div class="slide">
-            <div class="absolute-row-top bg-clouds-opac-7 align-left margin">
-              <p class="margin-5 color-deep-blue">{{hotel.name}} - {{hotel.city}}</p>
-              <p class="txt-size-small margin-5 color-deep-blue">Very attracive price</p>
+          <div class="slide margin-auto padding-10">
+            <div class="absolute-row-top bg-clouds-opac-7 align-left margin-10 txt-size-small-s">
+              <h3 class="margin color-deep-blue">{{hotel.name}} - {{hotel.city}}</h3>
+              <p class="txt-size-small margin color-deep-blue">Very attracive price</p>
             </div>
             <img class="responsive-img" :src="getImgUrl(hotel)">
           </div>
@@ -43,20 +43,9 @@
 <style scoped>
   .VueCarousel-slide {
     position: relative;
-    color: #ffffff;
-    font-family: Arial;
-    font-size: 24px;
-    text-align: center;
   }
 
   .container {
     width: 75%;
-    margin: 15px auto;
-    padding-bottom: 75px;
-  }
-
-  .slide {
-    margin: auto;
-    padding: 10px;
   }
 </style>

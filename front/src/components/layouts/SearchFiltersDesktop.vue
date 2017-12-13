@@ -11,10 +11,20 @@
     </ul>
     <h4>Avis client</h4>
     <ul>
-      <li><input id="reviews-4-more" type="checkbox"/><label for="reviews-4-more">4/5 et +</label></li>
-      <li><input id="reviews-3-more" type="checkbox"/><label for="reviews-3-more">3/5 et +</label></li>
-      <li><input id="reviews-2-more" type="checkbox"/><label for="reviews-2-more">2/5 et +</label></li>
-      <li><input id="reviews-1-more" type="checkbox"/><label for="reviews-1-more">1/5 et +</label></li>
+      <li>
+        <div class="rating">
+          <a><span id="orange">★</span><span id="orange">★</span><span id="orange">★</span><span id="orange">★</span><span>★</span></a>
+        </div>
+        <div class="rating">
+          <a><span id="orange">★</span><span id="orange">★</span><span id="orange">★</span><span>★</span><span>★</span></a>
+        </div>
+        <div class="rating">
+          <a><span id="orange">★</span><span id="orange">★</span><span>★</span><span>★</span><span>★</span></a>
+        </div>
+        <div class="rating">
+          <a><span id="orange">★</span><span>★</span><span>★</span><span>★</span><span>★</span></a>
+        </div>
+      </li>
     </ul>
     <h4>Services</h4>
     <ul>
@@ -25,7 +35,7 @@
     </ul>
     <h4>Prix</h4>
     <ul>
-      <div>
+      <div class="price">
         <li><input id="price-min" type="number" placeholder="min"/></li>
         <li><input id="price-max" type="number" placeholder="max"/></li>
       </div>
@@ -35,7 +45,13 @@
 </template>
 
 <script>
-  export default {}
+  import StarRatings from '../modules/StarRatings.vue'
+
+  export default {
+    components: {
+      StarRatings
+    }
+  }
 </script>
 <style>
   #filter-desktop {
@@ -58,4 +74,29 @@
   #filter-desktop li {
     list-style: none;
   }
+
+
+  .rating {
+    direction: ltr;
+  }
+  .rating span {
+    color: #c0c0c0;
+    text-decoration: none;
+    font-size: 2em;
+    transition: color .2s;
+  }
+  #orange{
+    color: orange;
+  }
+
+  .price input{
+    height: 30px;
+  }
+
+  input[type="checkbox"] {
+    width:15px;
+    height:15px;
+    cursor:pointer;
+  }
+
 </style>

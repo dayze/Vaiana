@@ -2,7 +2,7 @@
   <div id="modal">
     <spinner :active="false"></spinner>
     <div id="modal-content" class="round-5">
-      <span class="cursor-pointer" @click="close()">X</span>
+      <span class="cursor-pointer align-right float-right" @click="toggle()">X</span>
       <form method="post" class="flex-form styled-form padding padding-0-bottom">
         <div class="field-box">
           <input type="text" name="email" placeholder="Email" required="required" v-model="email">
@@ -12,7 +12,7 @@
         </div>
         <div class="field-box">
           <router-link :to="{ path: 'results' }">
-            <input type="submit" value="Se connecter/S'inscrire" @click="close()"
+            <input type="submit" value="Se connecter/S'inscrire" @click="toggle()"
                    class="border-none bg-pumpkin color-yang cursor-pointer hover-bg-carrot transition-3"/>
           </router-link>
         </div>
@@ -39,8 +39,8 @@
       }
     },
     methods: {
-      close () {
-        this.$emit('close')
+      toggle () {
+        this.$emit('toggle')
       }
     }
 
@@ -55,7 +55,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 3;
   }
 
   #modal-content {

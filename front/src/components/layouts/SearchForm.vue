@@ -8,10 +8,8 @@
     </div>
 
     <div class="actions-box">
-     <!-- <router-link :to="{ path: 'results' }">-->
-        <input type="submit" value="Trouver une chambre"
-               class="border-none bg-pumpkin color-yang cursor-pointer hover-bg-carrot transition-3"/>
-     <!-- </router-link>-->
+      <input type="submit" value="Trouver une chambre"
+             class="border-none bg-sunglow color-yang cursor-pointer hover-bg-sweet-potato transition-3"/>
     </div>
 
   </form>
