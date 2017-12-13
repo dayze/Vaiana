@@ -284,7 +284,9 @@
         this.persons.push({
           id: i,
           name: 'Lorem ipsum',
-          path: '../../assets/media/fake/persons/person' + i + '.jpg'
+          comment: 'Sed et efficitur velit. Donec pellentesque fringilla dui, a dapibus quam ultricies eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut fermentum facilisis ante, sit amet aliquam sem faucibus vel. Aliquam erat volutpat. Integer sit amet elit vel nulla gravida pellentesque eu vitae tellus. Maecenas a arcu vitae justo venenatis luctus elementum id odio.',
+          path: '../../assets/media/fake/persons/person' + i + '.jpg',
+          date: '01/01/1992'
         })
       }
     }

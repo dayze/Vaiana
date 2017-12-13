@@ -1,14 +1,15 @@
 <template>
-  <div id="comments" class="row">
-    <div v-for="person in this.persons" :key="person.id" class="cell-6">
+  <div id="comments" class="row margin-bottom">
+    <div v-for="person in persons" :key="person.id" class="cell-6 cell-12-m">
       <div class="comment">
         <div class="header flex flex-column flex-x-center flex-y-center">
-          <img :src="getImgUrl(person)" class="circle">
+          <img :src="getImgUrl(person)" class="circle margin">
           <star-ratings></star-ratings>
-          <h4></h4>
+          <h4 class="margin">{{person.name}}</h4>
+          <h5 class="margin">{{person.date}}</h5>
         </div>
         <div class="Comment">
-
+          {{person.comment}}
         </div>
       </div>
     </div>
@@ -24,10 +25,16 @@
     },
     name: 'Comments',
     props: {persons: Array},
-    method: {
+    methods: {
       getImgUrl (person) {
         return require('../../assets/media/fake/persons/person' + person.id + '.jpg')
       }
     }
   }
 </script>
+
+<style scoped>
+  #comments > div:last-child {
+    margin: auto;
+  }
+</style>
