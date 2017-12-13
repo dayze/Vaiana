@@ -1,8 +1,8 @@
 <template>
   <div id="home">
     <jumbo></jumbo>
-    <carousel-component :images="this.images"></carousel-component>
-    <carousel-component :images="this.images"></carousel-component>
+    <carousel-component :images="this.promoHotels"></carousel-component>
+    <carousel-component :images="this.promoHotels"></carousel-component>
   </div>
 </template>
 
@@ -18,11 +18,14 @@
     name: 'Home',
     data () {
       return {
-        images: []
+        promoHotels: [],
+        newHotels: []
       }
     },
     created () {
-      this.images.push({id: 1, path: 'Message 1'}, {id: 2, path: 'Message 2'})
+      for (let i = 1; i <= 6; i++) {
+        this.promoHotels.push({id: i, path: '../../assets/media/fake/promoHotels/hotel-promo' + i + '.jpg'})
+      }
     }
   }
 </script>
