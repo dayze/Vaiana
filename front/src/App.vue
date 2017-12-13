@@ -36,7 +36,7 @@
     },
     mounted () {
       Utils.setMainMarginTop()
-      window.addEventListener('resize', Utils.setMainMarginTop)
+      window.addEventListener('resize', Utils.setMainMarginTop())
     }
   }
 </script>
