@@ -1,5 +1,5 @@
 <template>
-  <div class="row bg-yang flex-y-center fixed-row-top" id="navbar" role="navigation">
+  <div class="row bg-yang flex-y-center fixed-row-top" id="nav-bar" role="navigation">
 
     <!-- MENU BURGER ICON -->
     <burger-menu v-on:toggle="toggle()"></burger-menu>

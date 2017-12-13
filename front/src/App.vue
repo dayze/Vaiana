@@ -15,11 +15,13 @@
   import Navbar from '@/components/layouts/Navbar'
   import ModalConnexion from '@/components/layouts/ModalConnexion'
   import Utils from '@/utils'
+  import FooterLayout from '@/components/layouts/FooterLayout'
 
   export default {
     components: {
       Navbar,
-      ModalConnexion
+      ModalConnexion,
+      FooterLayout
     },
     name: 'app',
     data () {
