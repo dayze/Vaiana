@@ -1,6 +1,6 @@
 <template>
   <div class="container margin-auto floats-box">
-    <carousel :navigationEnabled="true" :perPageCustom="[[300, 1], [1024, 2]]" paginationActiveColor="#E1B753">
+    <carousel :navigationEnabled="true" :perPageCustom="[[300, 1], [1024, 2]]" paginationActiveColor="#E1B753" paginationColor="#bdc3c7">
       <slide v-for="hotel in this.hotels" :key="hotel.id">
         <router-link :to="{ path: 'results' }">
           <div class="slide margin-auto padding-10">
