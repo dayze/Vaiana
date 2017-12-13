@@ -1,19 +1,26 @@
 <template>
   <div id="home">
     <jumbo></jumbo>
-    <h2 class="align-center">Hôtels en promotion</h2>
-    <carousel-component :hotels="this.promoHotels"></carousel-component>
-    <h2 class="align-center">Derniers hôtels ajoutés</h2>
-    <carousel-component :hotels="this.newHotels"></carousel-component>
-    <div class="container margin-auto">
+    <div class="row">
+      <div class="cell-8 margin-50-top margin-50-bottom margin-auto">
       <h3 class="txt-upper align-center txt-unset">Lorem ipsum dolor sit amet</h3>
       <p class="align-center"> Donec porta rutrum risus, vitae hendrerit felis mollis vel. Vestibulum lacinia, tellus
         pulvinar aliquet vehicula, odio neque ornare augue, eu malesuada lorem ligula in neque. Curabitur ac interdum
         justo. Morbi ac tristique libero. Cras finibus erat vel diam congue, ut imperdiet dui hendrerit. Cras eu tempus
         eros.</p>
-      <h3 class="txt-upper align-center txt-unset">Lorem ipsum dolor sit amet</h3>
-      <p class="align-center"> Mauris a ex blandit, tristique nunc convallis, aliquet dolor. Integer malesuada laoreet
-        dolor, et porta elit imperdiet in. Donec sit amet orci a ipsum luctus hendrerit ac vel urna..</p>
+      </div>
+    </div>
+    <div class="row bg-clouds">
+      <div class="cell-12 margin-50-top margin-50-bottom">
+        <h2 class="align-center">Hôtels en promotion</h2>
+        <carousel-component :hotels="this.promoHotels"></carousel-component>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell-12 margin-50-top margin-50-bottom">
+        <h2 class="align-center">Derniers hôtels ajoutés</h2>
+        <carousel-component :hotels="this.newHotels"></carousel-component>
+      </div>
     </div>
   </div>
 </template>
