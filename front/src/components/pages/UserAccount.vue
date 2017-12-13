@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="">
     <div class="row container-medium margin-auto">
       <div class="cell-4 border-right padding-right hide-s">
       <ul class="list-unstyled align-center padding-top">

@@ -35,7 +35,6 @@
       }
     },
     mounted () {
-      console.log('A')
       Utils.setMainMarginTop()
       window.addEventListener('resize', Utils.setMainMarginTop)
     }
