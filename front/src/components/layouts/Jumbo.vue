@@ -27,7 +27,8 @@
     min-height: 400px;
     height: 100vh;
     background-size: cover;
-    background: url(../../assets/media/img/pexels-photo-97904.jpeg) fixed center;
+    background: url(../../assets/media/img/pexels-photo-97904.jpeg) fixed center no-repeat;
+    background-size: cover;
   }
 
   #jumbo h1 {
