@@ -201,6 +201,10 @@
     margin-right: 5px;
   }
 
+  #results > div:nth-child(2n) {
+    background: #ECF0F1;
+  }
+
   @media screen and (max-width: 768px) {
     #results {
       margin-left: 10px;
