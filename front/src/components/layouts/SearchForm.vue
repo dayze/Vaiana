@@ -1,4 +1,4 @@
-<template>
+  <template>
   <form method="post" class="flex-form styled-form padding padding-0-bottom">
     <div class="field-box">
       <input type="text" name="localisation" placeholder="Caen" required="required" v-model="city">
@@ -10,7 +10,6 @@
       <input type="submit" value="Trouver une chambre"
              class="border-none bg-sunglow color-yang cursor-pointer hover-bg-sweet-potato transition-3"/>
     </div>
-
   </form>
 </template>
 
