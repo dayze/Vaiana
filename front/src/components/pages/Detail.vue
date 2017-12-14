@@ -1,60 +1,8 @@
 <template>
   <div>
-    <div id="carrousel" class="row align-center bg-clouds">
-      <div class="row-column flex-y-center flex-x-center cell-2 cursor-pointer">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.2 477.2" class="APP_carrousel_arrows cursor-pointer">
-          <path
-            d="M145.2 238.6l215.5-215.5c5.3-5.3 5.3-13.8 0-19.1s-13.8-5.3-19.1 0l-225.1 225.1c-5.3 5.3-5.3 13.8 0 19.1l225.1 225c2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4c5.3-5.3 5.3-13.8 0-19.1L145.2 238.6z"/>
-        </svg>
-      </div>
-      <div class="cell-8-margin-0 APP_carrousel_window">
-        <figure>
-          <img class="responsive-img" src="../../assets/media/img/nik-lanus-41808.jpg" alt="dd"/>
-          <figcaption>
-            <div class="absolute-row-top bg-clouds-opac-7 align-left padding">
-              <h1 class="margin-5">The Joshua Tree House</h1>
-              <h2 class="inline-block margin-0">
-                <a href="#map" class="hover-color-green-lagoon" title="Voir l'emplacement de l'hotel">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="color-sunglow" width="20" height="20"
-                       viewBox="0 0 512 512">
-                    <path
-                      d="M256 0C153.8 0 70.6 83.2 70.6 185.4c0 126.9 165.9 313.2 173 321 6.6 7.4 18.2 7.4 24.8 0 7.1-7.9 173-194.1 173-321C441.4 83.2 358.2 0 256 0zM256 278.7c-51.4 0-93.3-41.9-93.3-93.3S204.6 92.1 256 92.1s93.3 41.9 93.3 93.3S307.4 278.7 256 278.7z"/>
-                  </svg>
-                  <span>Ouistreham</span>
-                </a>
-              </h2>
-            </div>
-            <div class="absolute-row-bottom align-center padding">
-              <ul class="list-inline list-unstyled">
-                <li>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                    <circle class="circle-active" cx="10" cy="10" r="8"/>
-                  </svg>
-                </li>
-                <li>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                    <circle class="circle-obj" cx="10" cy="10" r="8"/>
-                  </svg>
-                </li>
-                <li>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                    <circle class="circle-obj" cx="10" cy="10" r="8"/>
-                  </svg>
-                </li>
-              </ul>
-            </div>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="row-column flex-y-center flex-x-center cell-2 cursor-pointer">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.2 477.2"
-             class="APP_carrousel_arrows backwards cursor-pointer">
-          <path
-            d="M145.2 238.6l215.5-215.5c5.3-5.3 5.3-13.8 0-19.1s-13.8-5.3-19.1 0l-225.1 225.1c-5.3 5.3-5.3 13.8 0 19.1l225.1 225c2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4c5.3-5.3 5.3-13.8 0-19.1L145.2 238.6z"/>
-        </svg>
-      </div>
-    </div>
-
+    <!-- ### Carousel -->
+    <carousel-component-detailed :name="this.name" :city="this.city" :images="this.images"></carousel-component-detailed>
+    <!-- ### Services -->
     <div class="container margin-auto">
       <div class="row">
         <div class="cell-12">
@@ -83,12 +31,18 @@
         </div>
       </div>
 
+      <!-- ### Presentation -->
       <div id="presentation" class="row">
-        <div class="row cell-12">
-
-          <div class="cell-8 c-12-s">
+        <div class="row">
+          <div class="cell-8 c-12-s padding-right padding-0-s">
             <h2>Présentation</h2>
-            <h3 class="margin-0">The Joshua Tree House</h3>
+            <h3 class="margin-0 inline-block">The Joshua Tree House</h3>
+            <svg id="add-to-favorites" class="margin-left" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512">
+              <g>
+                <title>Ajouter à mes favoris</title>
+                <path d="M461.46 63.908c-32.596-32.486-75.818-50.279-121.632-50.138-29.542.1-58.327 7.738-83.828 22.17-25.506-14.435-54.3-22.074-83.846-22.17l-.572-.001c-45.622 0-88.595 17.796-121.048 50.145C17.946 96.396 0 139.524 0 185.354c0 43.787 16.495 85.478 46.444 117.392l165.585 176.447c11.352 12.098 27.377 19.037 43.969 19.038 16.593 0 32.62-6.939 43.973-19.037l165.585-176.448C495.505 270.832 512 229.142 512 185.354c0-45.833-17.949-88.964-50.54-121.446zm-17.78 218.309L278.094 458.666a30.411 30.411 0 0 1-22.095 9.565 30.412 30.412 0 0 1-22.094-9.566L68.318 282.216C43.609 255.885 30 221.485 30 185.354c0-37.799 14.813-73.381 41.713-100.193 26.791-26.704 62.242-41.393 99.873-41.393l.471.001c26.806.087 52.852 7.692 75.358 21.995 4.833 3.364 11.413 3.691 16.675.315 22.615-14.505 48.839-22.22 75.838-22.311l.486-.001c37.626 0 73.079 14.688 99.868 41.388C467.185 111.968 482 147.553 482 185.354c0 36.131-13.609 70.531-38.32 96.863z"/>
+              </g>
+            </svg>
             <h3>Ouistreham</h3>
             <ul class="list-inline list-unstyled">
               <li>
@@ -113,8 +67,8 @@
               <span>€</span>
             </h4>
             <star-ratings :note="4"></star-ratings>
-            <p class="align-center txt-size-small margin-0-top">Voir tous les avis &rarr;</p>
-            <form method="post" class="flex-form styled-form padding margin-10-bottom">
+            <a href="#comments" title="Voir les commentaires" class="txt-size-small margin-0-top">Voir tous les avis &rarr;</a>
+            <form method="post" class="flex-form styled-form padding margin-bottom">
               <div class="field-box">
                 <label for="reservation-date">
                   Votre date d'arrivée :
@@ -265,7 +219,7 @@
         </div>
       </div>
 
-      <!-- Contact -->
+      <!-- ### Contact -->
       <div id="contact" class="row">
         <div class="cell-12">
           <h2>Contact</h2>
@@ -289,11 +243,10 @@
         </div>
       </div>
 
-      <!-- Comments -->
+      <!-- ### Comments -->
       <comments :persons="this.persons"></comments>
 
     </div>
-
 
   </div>
 </template>
@@ -302,18 +255,23 @@
   import StarRatings from '../modules/StarRatings.vue'
   import GoogleMapComponent from '../modules/GoogleMap.vue'
   import Comments from '../layouts/Comments'
+  import CarouselComponentDetailed from '../modules/CarouselComponentDetailed'
 
   export default {
     components: {
       StarRatings,
       GoogleMapComponent,
-      Comments
+      Comments,
+      CarouselComponentDetailed
     },
     name: 'Detail',
     data () {
       return {
         openMoreServices: false,
-        persons: []
+        persons: [],
+        images: [],
+        name: '',
+        city: ''
       }
     },
     methods: {
@@ -325,6 +283,8 @@
       }
     },
     created () {
+      this.name = 'Hotel California'
+      this.city = 'La Ferté Mathet'
       for (let i = 1; i <= 3; i++) {
         this.persons.push({
           id: i,
@@ -332,6 +292,12 @@
           comment: 'Sed et efficitur velit. Donec pellentesque fringilla dui, a dapibus quam ultricies eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut fermentum facilisis ante, sit amet aliquam sem faucibus vel. Aliquam erat volutpat. Integer sit amet elit vel nulla gravida pellentesque eu vitae tellus. Maecenas a arcu vitae justo venenatis luctus elementum id odio.',
           path: '../../assets/media/fake/persons/person' + i + '.jpg',
           date: '01/01/1992'
+        })
+      }
+      for (let i = 1; i <= 4; i++) {
+        this.images.push({
+          id: i,
+          path: '../../assets/media/fake/detailedRoom/room' + i + '.jpeg'
         })
       }
     }
@@ -432,8 +398,17 @@
     height: 50vh;
   }
 
-  .a {
-    fill: #27241F;
+  #add-to-favorites {
+    cursor: pointer;
+    vertical-align: top;
+  }
+
+  svg path {
+    fill: #404852;
+  }
+
+  #add-to-favorites:hover path {
+    fill: #789F8A;
   }
 
 </style>

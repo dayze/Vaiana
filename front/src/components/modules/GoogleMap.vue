@@ -46,6 +46,11 @@
 
 <style>
   .vue-map-container {
-    width: 100%; height: 100%
+    width: 100%;
+    height: 100%;
+  }
+
+  .gm-style-pbt {
+    text-align: center;
   }
 </style>

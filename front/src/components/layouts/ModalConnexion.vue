@@ -60,7 +60,7 @@
 
   #modal-content {
     position: relative;
-    margin: 25% auto;
+    margin: 15% auto;
     background-color: #fff;
     width: 50%;
     padding: 15px;
