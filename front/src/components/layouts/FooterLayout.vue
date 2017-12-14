@@ -1,24 +1,19 @@
 <template>
-  <footer class="bg-deep-blue color-yang padding-50-top-bottom">
-    <div class="row flex-y-center">
+  <footer class="bg-deep-blue color-yang">
+    <div class="row flex-y-center flex-x-center">
       <!-- FORM NEWS LETTER -->
       <div class="cell-6 align-center">
         <form>
-          <label for="email">Inscrivez-vous à la newsletter de BookingDay</label>
-          <input class="padding-10 border-none" type="email" name="email" id="email" placeholder="Votre email"/>
-          <input type="submit" value="S'inscrire"/>
+          <label for="email">La newsletter Bookingday.fr : </label>
+          <input class="padding-10 border-none" type="email" name="email" id="email" placeholder="email"/>
+          <input type="submit" id="newsletter" value="S'inscrire" class="txt-uppercase padding-10 border-none bg-sunglow color-yang cursor-pointer hover-bg-sweet-potato transition-3"/>
         </form>
       </div>
 
       <!-- SOCIAL NETWORKS -->
-      <div class="cell-6 txt-size-giant bg-silver">
+      <div class="cell-1 txt-size-giant">
         <i class="devicon-facebook-plain"></i>
         <i class="devicon-twitter-plain"></i>
-      </div>
-    </div>
-    <div class="row">
-      <div class="cell-12 c-12-margin-0-s">
-        <navbar-content></navbar-content>
       </div>
     </div>
   </footer>
@@ -34,3 +29,14 @@
     name: 'FooterLayout'
   }
 </script>
+
+<style>
+  footer{
+    height: 75px;
+    display: table-row;
+  }
+
+  #newsletter{
+    text-transform: uppercase;
+  }
+</style>
