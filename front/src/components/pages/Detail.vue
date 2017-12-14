@@ -84,48 +84,50 @@
       </div>
 
       <div id="presentation" class="row">
-        <div class="cell-12">
-          <h2 class="margin-0">Présentation</h2>
-        </div>
-        <div class="cell-8">
-          <h3 class="margin-0">The Joshua Tree House</h3>
-          <h3>Ouistreham</h3>
-          <ul class="list-inline list-unstyled">
-            <li>
-              3 personnes
-            </li>
-            <li>
-              2 lits (1 lit double et 1 lit simple)
-            </li>
-          </ul>
-          <p class="padding-10-top-bottom">
-            Quibus occurrere bene pertinax miles explicatis ordinibus parans hastisque feriens scuta qui habitus iram
-            pugnantium concitat et dolorem proximos iam gestu terrebat sed eum in certamen alacriter consurgentem
-            revocavere ductores rati intempestivum anceps subire certamen cum haut longe muri distarent, quorum tutela
-            securitas poterat in solido locari cunctorum.
-          </p>
-        </div>
+        <div class="row cell-12">
 
-        <div class="cell-4 bg-clouds align-center">
-          <h4 class="color-deep-blue">
-            <span class="color-wet-asphalt txt-unstyled margin-right">à partir de :</span>
-            <span class="txt-size-big">45</span>
-            <span>€</span>
-          </h4>
-          <star-ratings :note="4"></star-ratings>
-          <p class="align-center txt-size-small margin-0-top">Voir tous les avis &rarr;</p>
-          <form method="post" class="flex-form styled-form padding margin-10-bottom">
-            <div class="field-box">
-              <label for="reservation-date">
-                Votre date d'arrivée :
-              </label>
-              <input id="reservation-date" type="date" name="date" required="required">
-            </div>
-            <div class="actions-box">
-              <input type="submit" value="Réserver maintenant"
-                     class="border-none bg-sunglow color-yang cursor-pointer hover-bg-sweet-potato transition-3"/>
-            </div>
-          </form>
+          <div class="cell-8 c-12-s">
+            <h2>Présentation</h2>
+            <h3 class="margin-0">The Joshua Tree House</h3>
+            <h3>Ouistreham</h3>
+            <ul class="list-inline list-unstyled">
+              <li>
+                3 personnes
+              </li>
+              <li>
+                2 lits (1 lit double et 1 lit simple)
+              </li>
+            </ul>
+            <p class="padding-10-top-bottom">
+              Quibus occurrere bene pertinax miles explicatis ordinibus parans hastisque feriens scuta qui habitus iram
+              pugnantium concitat et dolorem proximos iam gestu terrebat sed eum in certamen alacriter consurgentem
+              revocavere ductores rati intempestivum anceps subire certamen cum haut longe muri distarent, quorum tutela
+              securitas poterat in solido locari cunctorum.
+            </p>
+          </div>
+
+          <div class="cell-4 bg-clouds align-center c-12-s">
+            <h4 class="color-deep-blue">
+              <span class="color-wet-asphalt txt-unstyled margin-right">à partir de :</span>
+              <span class="txt-size-big">45</span>
+              <span>€</span>
+            </h4>
+            <star-ratings :note="4"></star-ratings>
+            <p class="align-center txt-size-small margin-0-top">Voir tous les avis &rarr;</p>
+            <form method="post" class="flex-form styled-form padding margin-10-bottom">
+              <div class="field-box">
+                <label for="reservation-date">
+                  Votre date d'arrivée :
+                </label>
+                <input id="reservation-date" type="date" name="date" required="required">
+              </div>
+              <div class="actions-box">
+                <input type="submit" value="Réserver maintenant"
+                       class="border-none bg-sunglow color-yang cursor-pointer hover-bg-sweet-potato transition-3"/>
+              </div>
+            </form>
+          </div>
+
         </div>
 
       </div>
@@ -140,11 +142,11 @@
 
             <!-- Tab 1 -->
             <input type="radio" name="tabset" id="tab1" aria-controls="equipments" checked="checked">
-            <label for="tab1" @click="displayLess()">Equipements</label>
+            <label class="txt-size-small-xs" for="tab1" @click="displayLess()">Equipements</label>
 
             <!-- Tab 2 -->
             <input type="radio" name="tabset" id="tab2" aria-controls="familyEquipments">
-            <label for="tab2" @click="displayLess()">Equipements pour la famille</label>
+            <label class="txt-size-small-xs" for="tab2" @click="displayLess()">Equipements pour la famille</label>
 
             <div class="tab-panels">
 

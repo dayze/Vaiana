@@ -29,7 +29,7 @@
               <h3 class="margin-0">Adresse/ville</h3>
             </li>
             <li>
-              <star-ratings></star-ratings>
+              <star-ratings :note="4"></star-ratings>
             </li>
           </ul>
           <p class="truncate-4 hide-s">
@@ -83,7 +83,7 @@
               <h3 class="margin-0">Adresse/ville</h3>
             </li>
             <li>
-              <star-ratings></star-ratings>
+              <star-ratings :note="5"></star-ratings>
             </li>
           </ul>
           <p class="truncate-4 hide-s">
@@ -136,7 +136,7 @@
               <h3 class="margin-0">Adresse/ville</h3>
             </li>
             <li>
-              <star-ratings></star-ratings>
+              <star-ratings :note="4"></star-ratings>
             </li>
           </ul>
           <p class="truncate-4 hide-s">
