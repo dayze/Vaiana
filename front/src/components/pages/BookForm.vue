@@ -22,6 +22,7 @@
         </div>
         <div class="field-box">
           <div class="align-field-box">
+            <label class="required">Horaires</label>
             <input type="time" name="heuredebut" required="required">
             <input type="time" name="heurefin" required="required">
           </div>
