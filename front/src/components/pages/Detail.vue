@@ -1,56 +1,8 @@
 <template>
   <div>
-    <div id="carrousel" class="row align-center bg-clouds">
-      <div class="row-column flex-y-center flex-x-center cell-2 cursor-pointer">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.2 477.2" class="APP_carrousel_arrows cursor-pointer">
-          <path
-            d="M145.2 238.6l215.5-215.5c5.3-5.3 5.3-13.8 0-19.1s-13.8-5.3-19.1 0l-225.1 225.1c-5.3 5.3-5.3 13.8 0 19.1l225.1 225c2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4c5.3-5.3 5.3-13.8 0-19.1L145.2 238.6z"/>
-        </svg>
-      </div>
-      <div class="cell-8-margin-0 APP_carrousel_window">
-        <figure>
-          <img class="responsive-img" src="../../assets/media/img/nik-lanus-41808.jpg" alt="dd"/>
-          <figcaption>
-            <div class="absolute-row-top bg-clouds-opac-7 align-left padding">
-              <h1 class="margin-5">The Joshua Tree House</h1>
-              <svg xmlns="http://www.w3.org/2000/svg" class="APP_default_gray" width="20" height="20"
-                   viewBox="0 0 512 512">
-                <path
-                  d="M256 0C153.8 0 70.6 83.2 70.6 185.4c0 126.9 165.9 313.2 173 321 6.6 7.4 18.2 7.4 24.8 0 7.1-7.9 173-194.1 173-321C441.4 83.2 358.2 0 256 0zM256 278.7c-51.4 0-93.3-41.9-93.3-93.3S204.6 92.1 256 92.1s93.3 41.9 93.3 93.3S307.4 278.7 256 278.7z"/>
-              </svg>
-              <h2 class="inline-block margin-0">Ouistreham</h2>
-            </div>
-            <div class="absolute-row-bottom align-center padding">
-              <ul class="list-inline list-unstyled">
-                <li>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                    <circle class="circle-active" cx="10" cy="10" r="8"/>
-                  </svg>
-                </li>
-                <li>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                    <circle class="circle-obj" cx="10" cy="10" r="8"/>
-                  </svg>
-                </li>
-                <li>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                    <circle class="circle-obj" cx="10" cy="10" r="8"/>
-                  </svg>
-                </li>
-              </ul>
-            </div>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="row-column flex-y-center flex-x-center cell-2 cursor-pointer">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.2 477.2"
-             class="APP_carrousel_arrows backwards cursor-pointer">
-          <path
-            d="M145.2 238.6l215.5-215.5c5.3-5.3 5.3-13.8 0-19.1s-13.8-5.3-19.1 0l-225.1 225.1c-5.3 5.3-5.3 13.8 0 19.1l225.1 225c2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4c5.3-5.3 5.3-13.8 0-19.1L145.2 238.6z"/>
-        </svg>
-      </div>
-    </div>
-
+    <!-- ### Carousel -->
+    <carousel-component-detailed :name="this.name" :city="this.city" :images="this.images"></carousel-component-detailed>
+    <!-- ### Services -->
     <div class="container margin-auto">
       <div class="row">
         <div class="cell-12">
@@ -76,6 +28,7 @@
         </div>
       </div>
 
+      <!-- ### Presentation -->
       <div id="presentation" class="row">
         <div class="cell-8">
           <h2>The Joshua Tree House</h2>
@@ -234,7 +187,7 @@
         </div>
       </div>
 
-      <!-- Contact -->
+      <!-- ### Contact -->
       <div id="contact" class="row">
         <div class="cell-12">
         </div>
@@ -246,11 +199,10 @@
         </div>
       </div>
 
-      <!-- Comments -->
+      <!-- ### Comments -->
       <comments :persons="this.persons"></comments>
 
     </div>
-
 
   </div>
 </template>
@@ -258,17 +210,22 @@
 <script>
   import GoogleMapComponent from '../modules/GoogleMap.vue'
   import Comments from '../layouts/Comments'
+  import CarouselComponentDetailed from '../modules/CarouselComponentDetailed'
 
   export default {
     components: {
       GoogleMapComponent,
-      Comments
+      Comments,
+      CarouselComponentDetailed
     },
     name: 'Detail',
     data () {
       return {
         openMoreServices: false,
-        persons: []
+        persons: [],
+        images: [],
+        name: '',
+        city: ''
       }
     },
     methods: {
@@ -280,6 +237,8 @@
       }
     },
     created () {
+      this.name = 'Hotel California'
+      this.city = 'La Ferté Mathet'
       for (let i = 1; i <= 3; i++) {
         this.persons.push({
           id: i,
@@ -287,6 +246,12 @@
           comment: 'Sed et efficitur velit. Donec pellentesque fringilla dui, a dapibus quam ultricies eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut fermentum facilisis ante, sit amet aliquam sem faucibus vel. Aliquam erat volutpat. Integer sit amet elit vel nulla gravida pellentesque eu vitae tellus. Maecenas a arcu vitae justo venenatis luctus elementum id odio.',
           path: '../../assets/media/fake/persons/person' + i + '.jpg',
           date: '01/01/1992'
+        })
+      }
+      for (let i = 1; i <= 4; i++) {
+        this.images.push({
+          id: i,
+          path: '../../assets/media/fake/detailedRoom/room' + i + '.jpeg'
         })
       }
     }
