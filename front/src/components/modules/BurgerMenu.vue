@@ -1,5 +1,5 @@
 <template>
-  <div class="cell-3 hide show-s" id="menuToggle">
+  <div class="cell-3 hide show-m" id="menuToggle">
     <input type="checkbox" v-model="isChecked" @click="toggle()"/>
     <span></span>
     <span></span>
