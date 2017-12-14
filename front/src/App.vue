@@ -14,7 +14,6 @@
 <script>
   import Navbar from '@/components/layouts/Navbar'
   import ModalConnexion from '@/components/layouts/ModalConnexion'
-  import Utils from '@/utils'
   import FooterLayout from '@/components/layouts/FooterLayout'
 
   export default {
@@ -33,10 +32,6 @@
       toggle () {
         this.isModalUserOpen = !this.isModalUserOpen
       }
-    },
-    mounted () {
-      Utils.setMainMarginTop()
-      window.addEventListener('resize', Utils.setMainMarginTop())
     }
   }
 </script>
@@ -44,6 +39,10 @@
 <style>
   body {
     font-size: 1.05em;
+  }
+
+  main {
+    margin-top: 75px;
   }
 
   input, a {

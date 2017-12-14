@@ -7,11 +7,11 @@
               @click="changeTab(0)" :class="[isCurrentTab(0) ? 'bg-peter-river' : 'bg-deep-blue' ]">
             Mes réservations
           </li>
-          <li class="padding bg-deep-blue hover-bg-peter-river color-clouds border-bottom cursor-pointer"
+          <li class="padding hover-bg-peter-river color-clouds border-bottom cursor-pointer"
               @click="changeTab(1)" :class="[isCurrentTab(1) ? 'bg-peter-river' : 'bg-deep-blue' ]">
             Mes hôtels favoris
           </li>
-          <li class="padding bg-deep-blue hover-bg-peter-river color-clouds cursor-pointer"
+          <li class="padding hover-bg-peter-river color-clouds cursor-pointer"
               @click="changeTab(2)" :class="[isCurrentTab(2) ? 'bg-peter-river' : 'bg-deep-blue' ]">
             Mon profil
           </li>
@@ -62,7 +62,7 @@
         </div>
         <div class="show-s" :class="{'hide': !isCurrentTab(2)}">
           <h3 class="align-center">Mon profil</h3>
-          <p>test</p>
+
         </div>
       </div>
     </div>

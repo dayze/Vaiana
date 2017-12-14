@@ -1,22 +1,23 @@
 <template>
-  <div class="row bg-yang flex-y-center fixed-row-top border-bottom border-silver-bottom" id="nav-bar" role="navigation">
+  <div class="row bg-yang flex-y-center fixed-row-top border-bottom border-silver-bottom" id="nav-bar"
+       role="navigation">
 
     <!-- MENU BURGER ICON -->
     <burger-menu v-on:toggle="toggle()"></burger-menu>
 
     <!-- LOGO -->
-    <div class="cell-5 c-6-s align-left align-center-s">
+    <div class="cell-5 c-6-m align-left align-center-m">
       <h1 class="transition-3 margin-0 txt-unset txt-size-big txt-size-normal-xs txt-upper">
         <a href="/" class="inline-block" title="Accueil">Booking Day</a>
       </h1>
     </div>
 
     <!-- MENU LIST -->
-    <div class="cell-7 align-right hide-s" id="menuList">
+    <div class="cell-7 align-right hide-m" id="menuList">
       <navbar-content v-on:toggle="toggle()"></navbar-content>
     </div>
     <!-- SEARCH ICON -->
-    <div class="cell-3 hide show-s align-right">
+    <div class="cell-3 hide show-m align-right">
       <img id="search-icon" class="responsive-img cursor-pointer" src="../../assets/icons/search.svg"/>
     </div>
 
@@ -45,6 +46,7 @@
 
   #nav-bar {
     z-index: 1001;
+    height: 75px;
   }
 
   /* gt 1000 for counter before and after magicmonkey */
