@@ -63,7 +63,6 @@
 
   export default {
     mounted () {
-      console.log('B')
       this.filterIsDiplayed = false
       hideFilters()
       window.addEventListener('resize', hideFilters)
