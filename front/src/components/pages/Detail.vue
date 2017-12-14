@@ -96,8 +96,26 @@
           </p>
         </div>
 
-        <div class="cell-4 bg-clouds">
-
+        <div class="cell-4 bg-clouds align-center">
+          <h4 class="color-deep-blue">
+            <span class="color-wet-asphalt txt-unstyled margin-right">à partir de :</span>
+            <span class="txt-size-big">45</span>
+            <span>€</span>
+          </h4>
+          <star-ratings :note="4"></star-ratings>
+          <p class="align-center txt-size-small margin-0-top">Voir tous les avis &rarr;</p>
+          <form method="post" class="flex-form styled-form padding margin-10-bottom">
+            <div class="field-box">
+              <label for="reservation-date">
+                Votre date d'arrivée :
+              </label>
+              <input id="reservation-date" type="date" name="date" required="required">
+            </div>
+            <div class="actions-box">
+              <input type="submit" value="Réserver maintenant"
+                     class="border-none bg-sunglow color-yang cursor-pointer hover-bg-sweet-potato transition-3"/>
+            </div>
+          </form>
         </div>
 
       </div>
@@ -256,11 +274,13 @@
 </template>
 
 <script>
+  import StarRatings from '../modules/StarRatings.vue'
   import GoogleMapComponent from '../modules/GoogleMap.vue'
   import Comments from '../layouts/Comments'
 
   export default {
     components: {
+      StarRatings,
       GoogleMapComponent,
       Comments
     },
