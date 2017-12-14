@@ -11,9 +11,13 @@
               @click="changeTab(1)" :class="[isCurrentTab(1) ? 'bg-peter-river' : 'bg-deep-blue' ]">
             Mes hôtels favoris
           </li>
-          <li class="padding hover-bg-peter-river color-clouds cursor-pointer"
+          <li class="padding hover-bg-peter-river color-clouds cursor-pointer border-bottom"
               @click="changeTab(2)" :class="[isCurrentTab(2) ? 'bg-peter-river' : 'bg-deep-blue' ]">
             Mon profil
+          </li>
+          <li class="padding hover-bg-peter-river color-clouds cursor-pointer"
+              @click="changeTab(3)" :class="[isCurrentTab(3) ? 'bg-peter-river' : 'bg-deep-blue' ]">
+            Changer mon mot de passe
           </li>
         </ul>
       </div>
@@ -62,9 +66,38 @@
         </div>
         <div class="show-s" :class="{'hide': !isCurrentTab(2)}">
           <h3 class="align-center">Mon profil</h3>
-
+          <form method="post" class="flex-form styled-form">
+            <div class="field-box">
+              <input type="text" name="email" placeholder="Email" required="required" value="vaiana@gmail.com">
+            </div>
+            <h4>Adresse de facturation</h4>
+            <div class="inline-field padding-bottom">
+              <input type="text" class="margin-right" name="date" required="required" placeholder="Numéro de voie">
+              <input type="text" class="margin-right" name="date" required="required" placeholder="Adresse">
+              <input type="text" class="margin-right" name="date" required="required"placeholder="Ville" >
+              <input type="text" name="date" required="required" placeholder="Complement">
+            </div>
+            <div class="actions-box">
+              <input type="submit" value="Modifier"
+                     class="border-none bg-sunglow color-yang cursor-pointer hover-bg-sweet-potato transition-3"/>
+            </div>
+          </form>
         </div>
-      </div>
+        <div class="show-s" :class="{'hide': !isCurrentTab(3)}">
+          <h3 class="align-center">Changer mon mot de passe</h3>
+          <form method="post" class="flex-form styled-form">
+            <div class="field-box">
+              <input type="password" name="oldPassword" placeholder="Ancien mot de passe" required="required">
+              <input type="password" name="newPassword" placeholder="Nouveau mot de passe" required="required">
+              <input type="password" name="newPasswordConfirm" placeholder="Confirmer" required="required">
+            </div>
+            <div class="actions-box">
+              <input type="submit" value="Modifier"
+                     class="border-none bg-sunglow color-yang cursor-pointer hover-bg-sweet-potato transition-3"/>
+            </div>
+          </form>
+        </div>
+        </div>
     </div>
   </div>
 </template>
@@ -86,8 +119,19 @@
     }
   }
 </script>
-<style scoped>
+<style scoped lang="scss">
   .img-table {
     max-width: 80px;
+  }
+  .wrap {
+    flex-wrap: wrap;
+  }
+  .inline-field {
+    display: flex;
+    flex-grow: 1;
+
+    input {
+      flex-grow: 1;
+    }
   }
 </style>
