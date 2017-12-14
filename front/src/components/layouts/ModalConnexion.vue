@@ -11,7 +11,7 @@
           <input type="password" placeholder="Mot de passe" name="password" required="required" v-model="password">
         </div>
         <div class="field-box">
-          <router-link :to="{ path: 'results' }">
+          <router-link :to="{ path: 'user' }">
             <input type="submit" value="Se connecter/S'inscrire" @click="toggle()"
                    class="border-none bg-pumpkin color-yang cursor-pointer hover-bg-carrot transition-3"/>
           </router-link>

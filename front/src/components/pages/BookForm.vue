@@ -6,33 +6,25 @@
 
       <form method="post" class="flex-form styled-form padding padding-0-bottom">
         <div class="field-box">
-          <label class="required">Prénom</label>
-          <input type="text" name="firstname" placeholder="Prénom" required="required">
+          <input type="text" name="firstname" placeholder="prénom" required="required">
         </div>
         <div class="field-box">
-          <label class="required">Nom</label>
-          <input type="text" name="lastname" placeholder="Nom" required="required">
+          <input type="text" name="lastname" placeholder="nom" required="required">
         </div>
         <div class="field-box">
-          <label class="required">Code postal - Ville</label>
-          <input type="text" name="code" placeholder="14000 Caen" required="required">
+          <input type="text" name="mail" placeholder="john.doe@mail.com" required="required">
         </div>
         <div class="field-box">
-          <label class="required">Adresse</label>
-          <input type="text" name="address" placeholder="8 rue des Lilas" required="required">
+          <input type="text" name="telephone" placeholder="0213374202" required="required">
         </div>
         <div class="field-box">
-          <label class="required">Date de réservation</label>
           <input type="date" name="date" required="required">
         </div>
-        <div class="align-field-box align-center">
-          <label class="required">Heure de début</label>
-          <input type="time" name="date" required="required">
-          <label class="required">Heure de fin</label>
-          <input type="time" name="date" required="required">
-        </div>
         <div class="field-box">
-
+          <div class="align-field-box">
+            <input type="time" name="heuredebut" required="required">
+            <input type="time" name="heurefin" required="required">
+          </div>
         </div>
 
         <div class="actions-box">
