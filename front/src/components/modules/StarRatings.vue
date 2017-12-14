@@ -1,11 +1,7 @@
 <template>
   <div class="rating">
-    <div v-for="i in this.note">
-      <span class="active">★</span>
-    </div>
-    <div v-for="i in 5-this.note">
-      <span>★</span>
-    </div>
+    <span v-for="i in this.note" class="active">★</span><!--
+    --><span v-for="i in 5-this.note">★</span>
   </div>
 </template>
 
@@ -22,10 +18,6 @@
   /*.rating {
     direction: rtl;
   }*/
-
-  .rating div {
-    display: inline-block;
-  }
 
   .rating span {
     color: #c0c0c0;
