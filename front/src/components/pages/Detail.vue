@@ -13,12 +13,16 @@
           <figcaption>
             <div class="absolute-row-top bg-clouds-opac-7 align-left padding">
               <h1 class="margin-5">The Joshua Tree House</h1>
-              <svg xmlns="http://www.w3.org/2000/svg" class="APP_default_gray" width="20" height="20"
-                   viewBox="0 0 512 512">
-                <path
-                  d="M256 0C153.8 0 70.6 83.2 70.6 185.4c0 126.9 165.9 313.2 173 321 6.6 7.4 18.2 7.4 24.8 0 7.1-7.9 173-194.1 173-321C441.4 83.2 358.2 0 256 0zM256 278.7c-51.4 0-93.3-41.9-93.3-93.3S204.6 92.1 256 92.1s93.3 41.9 93.3 93.3S307.4 278.7 256 278.7z"/>
-              </svg>
-              <h2 class="inline-block margin-0">Ouistreham</h2>
+              <h2 class="inline-block margin-0">
+                <a href="#map" class="hover-color-green-lagoon" title="Voir l'emplacement de l'hotel">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="color-sunglow" width="20" height="20"
+                       viewBox="0 0 512 512">
+                    <path
+                      d="M256 0C153.8 0 70.6 83.2 70.6 185.4c0 126.9 165.9 313.2 173 321 6.6 7.4 18.2 7.4 24.8 0 7.1-7.9 173-194.1 173-321C441.4 83.2 358.2 0 256 0zM256 278.7c-51.4 0-93.3-41.9-93.3-93.3S204.6 92.1 256 92.1s93.3 41.9 93.3 93.3S307.4 278.7 256 278.7z"/>
+                  </svg>
+                  <span>Ouistreham</span>
+                </a>
+              </h2>
             </div>
             <div class="absolute-row-bottom align-center padding">
               <ul class="list-inline list-unstyled">
@@ -57,19 +61,22 @@
           <nav class="border-bottom border-silver padding-10-top-bottom">
             <ul class="list-inline list-unstyled">
               <li>
-                <a href="#presentation" title="Voir la présentation" class="hover-color-sky">Présentation</a>
+                <a href="#presentation" title="Voir la présentation" class="color-deep-blue hover-color-green-lagoon">Présentation</a>
               </li>
               <li>
-                <a href="#services" title="Voir les services" class="hover-color-sky">Services</a>
+                <a href="#services" title="Voir les services"
+                   class="color-deep-blue hover-color-green-lagoon">Services</a>
               </li>
               <li>
-                <a href="#comments" title="Voir les commentaires" class="hover-color-sky">Commentaires</a>
+                <a href="#comments" title="Voir les commentaires" class="color-deep-blue hover-color-green-lagoon">Commentaires</a>
               </li>
               <li>
-                <a href="#contact" title="Contacter l'hôtel" class="hover-color-sky">Contact</a>
+                <a href="#contact" title="Contacter l'hôtel"
+                   class="color-deep-blue hover-color-green-lagoon">Contact</a>
               </li>
               <li>
-                <a href="#map" title="Voir l'emplacement" class="hover-color-sky">Emplacement</a>
+                <a href="#map" title="Voir l'emplacement"
+                   class="color-deep-blue hover-color-green-lagoon">Emplacement</a>
               </li>
             </ul>
           </nav>
@@ -77,26 +84,49 @@
       </div>
 
       <div id="presentation" class="row">
-        <div class="cell-8">
-          <h2>The Joshua Tree House</h2>
-          <h3>Ouistreham</h3>
-          <ul class="list-inline list-unstyled">
-            <li>
-              3 personnes
-            </li>
-            <li>
-              2 lits (1 lit double et 1 lit simple)
-            </li>
-          </ul>
-          <p class="padding-10-top-bottom">
-            Quibus occurrere bene pertinax miles explicatis ordinibus parans hastisque feriens scuta qui habitus iram
-            pugnantium concitat et dolorem proximos iam gestu terrebat sed eum in certamen alacriter consurgentem
-            revocavere ductores rati intempestivum anceps subire certamen cum haut longe muri distarent, quorum tutela
-            securitas poterat in solido locari cunctorum.
-          </p>
-        </div>
+        <div class="row cell-12">
 
-        <div class="cell-4 bg-clouds">
+          <div class="cell-8 c-12-s">
+            <h2>Présentation</h2>
+            <h3 class="margin-0">The Joshua Tree House</h3>
+            <h3>Ouistreham</h3>
+            <ul class="list-inline list-unstyled">
+              <li>
+                3 personnes
+              </li>
+              <li>
+                2 lits (1 lit double et 1 lit simple)
+              </li>
+            </ul>
+            <p class="padding-10-top-bottom">
+              Quibus occurrere bene pertinax miles explicatis ordinibus parans hastisque feriens scuta qui habitus iram
+              pugnantium concitat et dolorem proximos iam gestu terrebat sed eum in certamen alacriter consurgentem
+              revocavere ductores rati intempestivum anceps subire certamen cum haut longe muri distarent, quorum tutela
+              securitas poterat in solido locari cunctorum.
+            </p>
+          </div>
+
+          <div class="cell-4 bg-clouds align-center c-12-s">
+            <h4 class="color-deep-blue">
+              <span class="color-wet-asphalt txt-unstyled margin-right">à partir de :</span>
+              <span class="txt-size-big">45</span>
+              <span>€</span>
+            </h4>
+            <star-ratings :note="4"></star-ratings>
+            <p class="align-center txt-size-small margin-0-top">Voir tous les avis &rarr;</p>
+            <form method="post" class="flex-form styled-form padding margin-10-bottom">
+              <div class="field-box">
+                <label for="reservation-date">
+                  Votre date d'arrivée :
+                </label>
+                <input id="reservation-date" type="date" name="date" required="required">
+              </div>
+              <div class="actions-box">
+                <input type="submit" value="Réserver maintenant"
+                       class="border-none bg-sunglow color-yang cursor-pointer hover-bg-sweet-potato transition-3"/>
+              </div>
+            </form>
+          </div>
 
         </div>
 
@@ -105,20 +135,22 @@
       <!-- ### Services -->
       <div id="services" class="row">
         <div class="cell-12">
+          <h2>Services</h2>
+        </div>
+        <div class="cell-12">
           <div class="tabset">
 
             <!-- Tab 1 -->
             <input type="radio" name="tabset" id="tab1" aria-controls="equipments" checked="checked">
-            <label for="tab1" @click="displayLess()">Equipements</label>
+            <label class="txt-size-small-xs" for="tab1" @click="displayLess()">Equipements</label>
 
             <!-- Tab 2 -->
             <input type="radio" name="tabset" id="tab2" aria-controls="familyEquipments">
-            <label for="tab2" @click="displayLess()">Equipements pour la famille</label>
+            <label class="txt-size-small-xs" for="tab2" @click="displayLess()">Equipements pour la famille</label>
 
             <div class="tab-panels">
 
               <section id="equipments" class="tab-panel">
-                <h2>Equipements</h2>
                 <div class="row">
                   <div class="cell-3 flex flex-y-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 612 612">
@@ -180,7 +212,6 @@
               </section>
 
               <section id="familyEquipments" class="tab-panel">
-                <h2>Equipements pour la famille</h2>
                 <div class="row">
                   <div class="cell-3 flex flex-y-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
@@ -237,6 +268,18 @@
       <!-- Contact -->
       <div id="contact" class="row">
         <div class="cell-12">
+          <h2>Contact</h2>
+          <ul class="list-unstyled">
+            <li>
+              The Joshua Tree House
+            </li>
+            <li>
+              52 Quai Amiral Hamelin, 14000 Caen, France
+            </li>
+            <li>
+              12 06 06 06 06
+            </li>
+          </ul>
         </div>
         <!-- MAP -->
         <div id="map" class="cell-12">
@@ -256,11 +299,13 @@
 </template>
 
 <script>
+  import StarRatings from '../modules/StarRatings.vue'
   import GoogleMapComponent from '../modules/GoogleMap.vue'
   import Comments from '../layouts/Comments'
 
   export default {
     components: {
+      StarRatings,
       GoogleMapComponent,
       Comments
     },
