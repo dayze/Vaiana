@@ -1,36 +1,48 @@
 <template>
-  <div class="rating"><!--
-		--><a href="#5" title="Give 5 stars">★</a><!--
-		--><a href="#4" title="Give 4 stars">★</a><!--
-		--><a href="#3" title="Give 3 stars">★</a><!--
-		--><a href="#2" title="Give 2 stars">★</a><!--
-		--><a href="#1" title="Give 1 star">★</a>
+  <div class="rating">
+    <div v-for="i in this.note">
+      <span class="active">★</span>
+    </div>
+    <div v-for="i in 5-this.note">
+      <span>★</span>
+    </div>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'StarRatings'
+    name: 'StarRatings',
+    props: {
+      note: Number
+    }
   }
 </script>
 
 <style scoped>
-  .rating {
+  /*.rating {
     direction: rtl;
+  }*/
+
+  .rating div {
+    display: inline-block;
   }
 
-  .rating a {
+  .rating span {
     color: #c0c0c0;
     text-decoration: none;
     font-size: 2em;
     transition: color .2s;
   }
 
-  .rating a:hover,
-  .rating a:focus,
-  .rating a:hover ~ a,
-  .rating a:focus ~ a {
-    color: orange;
-    cursor: pointer;
+  .rating .active {
+    color: #E1B753;
   }
+
+  /*.rating span:hover,
+  .rating span:focus,
+  .rating span:hover ~ span,
+  .rating span:focus ~ span {
+    color: #E1B753;
+    cursor: pointer;
+  }*/
 </style>
