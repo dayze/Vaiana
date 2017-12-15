@@ -8,7 +8,7 @@
               <h3 class="margin color-deep-blue">{{hotel.name}} - {{hotel.city}}</h3>
               <p class="txt-size-small margin color-deep-blue">Very attracive price</p>
             </div>
-            <img class="responsive-img" :src="getImgUrl(hotel)">
+            <img class="width-100" :src="getImgUrl(hotel)">
           </div>
         </router-link>
       </slide>
