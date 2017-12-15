@@ -11,7 +11,7 @@
       </div>
 
       <!-- SOCIAL NETWORKS -->
-      <div class="cell-1 txt-size-giant">
+      <div class="cell-6 align-center txt-size-giant">
         <i class="devicon-facebook-plain"></i>
         <i class="devicon-twitter-plain"></i>
       </div>
