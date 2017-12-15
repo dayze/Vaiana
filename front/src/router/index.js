@@ -9,6 +9,7 @@ import BookForm from '@/components/pages/BookForm'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',

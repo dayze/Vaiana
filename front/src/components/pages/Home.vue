@@ -1,13 +1,13 @@
 <template>
   <div id="home">
     <jumbo></jumbo>
-    <div class="row">
-      <div class="cell-8 margin-50-top margin-50-bottom margin-auto">
-      <h3 class="txt-upper align-center txt-unset">Lorem ipsum dolor sit amet</h3>
-      <p class="align-center"> Donec porta rutrum risus, vitae hendrerit felis mollis vel. Vestibulum lacinia, tellus
-        pulvinar aliquet vehicula, odio neque ornare augue, eu malesuada lorem ligula in neque. Curabitur ac interdum
-        justo. Morbi ac tristique libero. Cras finibus erat vel diam congue, ut imperdiet dui hendrerit. Cras eu tempus
-        eros.</p>
+    <div id="about" class="row vh-100">
+      <div id="services" class="cell-8 margin-auto">
+        <h3 class="txt-upper align-center txt-unset">Lorem ipsum dolor sit amet</h3>
+        <p class="align-center"> Donec porta rutrum risus, vitae hendrerit felis mollis vel. Vestibulum lacinia, tellus
+          pulvinar aliquet vehicula, odio neque ornare augue, eu malesuada lorem ligula in neque. Curabitur ac interdum
+          justo. Morbi ac tristique libero. Cras finibus erat vel diam congue, ut imperdiet dui hendrerit. Cras eu tempus
+          eros.</p>
       </div>
     </div>
     <div class="row bg-clouds">
@@ -62,6 +62,11 @@
   }
 </script>
 
-<style scoped>
-
+<style>
+  .vh-100{
+    height: 100vh;
+  }
+  #services{
+    margin-top: 100px;
+  }
 </style>
