@@ -12,7 +12,7 @@
         <a class="hover-color-green-lagoon" href="/#about" title="A propos">A propos</a>
       </li>
       <li class="padding-m bg-green-lagoon-m border-yang border-bottom-m">
-        <a class="hover-color-green-lagoon" href="/#footer" title="Contact">Contact</a>
+        <a class="hover-color-green-lagoon" href="/#contact" title="Contact">Contact</a>
       </li>
       <li class="padding-m bg-green-lagoon-m border-yang">
         <a class="hover-color-green-lagoon" @click="toggle()" title="Connexion">Se connecter</a>

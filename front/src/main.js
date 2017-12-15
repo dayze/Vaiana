@@ -6,6 +6,7 @@ import router from './router'
 import 'magic-monkey'
 import './assets/css/theme/theme.css'
 import './assets/css/theme/vaiana.css'
+import 'vue-awesome/icons'
 
 Vue.config.productionTip = false
 
