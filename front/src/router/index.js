@@ -35,6 +35,8 @@ export default new Router({
       name: 'BookForm',
       component: BookForm
     }
-
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    return {x: 0, y: 0}
+  }
 })
