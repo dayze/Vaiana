@@ -1,12 +1,8 @@
 <template>
   <div id="comments" class="row margin">
-    <div class="cell-12">
-      <h2 class="color-green-lagoon">Commentaires</h2>
+    <h2 class="color-green-lagoon">Commentaires</h2>
       <div class="cell-12 margin-auto flex">
-        <div class="cell-8 cell-12-m margin-auto">
-          <div class="align-center">
-            <h2>Commentaires</h2>
-          </div>
+        <div class="cell-8 cell-12-m margin-auto margin-50-bottom">
           <div>
             <form method="post" class="flex-form styled-form padding padding-0-bottom">
               <div class="field-box">
@@ -40,7 +36,6 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
 </template>
 
