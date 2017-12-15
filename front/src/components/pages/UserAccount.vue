@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="row container-medium margin-auto">
-      <div class="cell-4 border-right padding-right hide-s">
+      <div class="cell-3 border-right padding-right hide-s">
         <ul class="list-unstyled align-center padding-top">
           <li class="padding  color-clouds border-bottom cursor-pointer hover-bg-peter-river"
               @click="changeTab(0)" :class="[isCurrentTab(0) ? 'bg-peter-river' : 'bg-deep-blue' ]">
@@ -21,40 +21,63 @@
           </li>
         </ul>
       </div>
-      <div class="cell-8 cell-12-s">
+      <div class="cell-9 cell-12-s">
         <div class="show-s" :class="{'hide': !isCurrentTab(0)}">
           <h3 class="align-center">Mes réservations</h3>
-          <table class="styled-table">
+          <table id="bookmarks" class="styled-table">
             <thead>
             <tr>
               <th>Hôtel</th>
+              <th>Nom</th>
+              <th>Ville</th>
               <th>Date</th>
-              <th>Personnes</th>
+              <th>Plage horaire</th>
+              <th>Heure d'arrivée</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-              <td><img class="img-table round-10" src="../../assets/media/fake/promoHotels/hotel-promo1.jpg" alt="">
-              </td>
-              <td>15/06/2018 12h-17h</td>
               <td>
-                <select>
-                  <template v-for="(n, index) in 5">
-                    <option value="valeur1">{{n}}</option>
-                  </template>
-                </select>
+                <router-link :to="{ path: 'detail' }">
+                  <img src="../../assets/media/fake/promoHotels/hotel-promo1.jpg" alt="">
+                </router-link>
+              </td>
+              <td>
+                <router-link :to="{ path: 'detail' }">Taverne de la paix</router-link>
+              </td>
+              <td>
+                <router-link :to="{ path: 'detail' }">La Ferté-Macé</router-link>
+              </td>
+              <td>
+                <router-link :to="{ path: 'detail' }">15/06/2018</router-link>
+              </td>
+              <td>
+                <router-link :to="{ path: 'detail' }">08h - 17h</router-link>
+              </td>
+              <td>
+                <router-link :to="{ path: 'detail' }">12h</router-link>
               </td>
             </tr>
             <tr>
-              <td><img class="img-table round-10" src="../../assets/media/fake/promoHotels/hotel-promo2.jpg" alt="">
-              </td>
-              <td>16/06/2018 08h-17h</td>
               <td>
-                <select>
-                  <template v-for="(n, index) in 5">
-                    <option value="valeur1">{{n}}</option>
-                  </template>
-                </select>
+                <router-link :to="{ path: 'detail' }">
+                  <img src="../../assets/media/fake/promoHotels/hotel-promo2.jpg" alt="">
+                </router-link>
+              </td>
+              <td>
+                <router-link :to="{ path: 'detail' }">Inter-Hôtel de France</router-link>
+              </td>
+              <td>
+                <router-link :to="{ path: 'detail' }">Caen</router-link>
+              </td>
+              <td>
+                <router-link :to="{ path: 'detail' }">16/06/2018</router-link>
+              </td>
+              <td>
+                <router-link :to="{ path: 'detail' }">08h - 17h</router-link>
+              </td>
+              <td>
+                <router-link :to="{ path: 'detail' }">08h</router-link>
               </td>
             </tr>
             </tbody>
@@ -62,7 +85,7 @@
         </div>
         <div class="show-s" :class="{'hide': !isCurrentTab(1)}">
           <h3 class="align-center">Mes hôtels favoris</h3>
-          <table id="bookmarks" class="styled-table">
+          <table id="favorites" class="styled-table">
             <thead>
             <tr>
               <th>Hôtel</th>
@@ -75,7 +98,7 @@
             <tr>
               <td>
                 <router-link :to="{ path: 'detail' }">
-                  <img class="img-table round-10" src="../../assets/media/fake/promoHotels/hotel-promo1.jpg" alt="">
+                  <img src="../../assets/media/fake/promoHotels/hotel-promo1.jpg" alt="">
                 </router-link>
               </td>
               <td>
@@ -84,7 +107,7 @@
               <td>
                 <router-link :to="{ path: 'detail' }">La Ferté-Macé</router-link>
               </td>
-              <td class="align-center">
+              <td>
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512">
                   <g id="dislike">
                     <title>Retirer</title>
@@ -99,7 +122,7 @@
             <tr>
               <td>
                 <router-link :to="{ path: 'detail' }">
-                  <img class="img-table round-10" src="../../assets/media/fake/promoHotels/hotel-promo2.jpg" alt="">
+                  <img src="../../assets/media/fake/promoHotels/hotel-promo2.jpg" alt="">
                 </router-link>
               </td>
               <td>
@@ -108,7 +131,7 @@
               <td>
                 <router-link :to="{ path: 'detail' }">Caen</router-link>
               </td>
-              <td class="align-center">
+              <td>
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512">
                   <g id="dislike">
                     <title>Retirer</title>
@@ -130,11 +153,11 @@
               <input type="text" name="email" placeholder="Email" required="required" value="vaiana@gmail.com">
             </div>
             <h4>Adresse de facturation</h4>
-            <div class="inline-field padding-bottom">
-              <input type="text" class="" name="date" required="required" placeholder="Numéro de voie">
-              <input type="text" class="" name="date" required="required" placeholder="Adresse">
-              <input type="text" class="" name="date" required="required" placeholder="Ville">
-              <input type="text" name="date" required="required" placeholder="Complement">
+            <div class="field-box">
+              <input type="text" name="date" required="required" placeholder="Numéro de voie" size="1">
+              <input type="text" name="date" required="required" placeholder="Adresse" size="1">
+              <input type="text" name="date" required="required" placeholder="Ville" size="1">
+              <input type="text" name="date" required="required" placeholder="Complement" size="1">
             </div>
             <div class="actions-box">
               <input type="submit" value="Modifier"
@@ -146,9 +169,9 @@
           <h3 class="align-center">Changer mon mot de passe</h3>
           <form method="post" class="flex-form styled-form">
             <div class="field-box">
-              <input type="password" name="oldPassword" placeholder="Ancien mot de passe" required="required">
-              <input type="password" name="newPassword" placeholder="Nouveau mot de passe" required="required">
-              <input type="password" name="newPasswordConfirm" placeholder="Confirmer" required="required">
+              <input type="password" name="oldPassword" placeholder="Ancien mot de passe" required="required" size="1">
+              <input type="password" name="newPassword" placeholder="Nouveau mot de passe" required="required" size="1">
+              <input type="password" name="newPasswordConfirm" placeholder="Confirmer" required="required" size="1">
             </div>
             <div class="actions-box">
               <input type="submit" value="Modifier"
@@ -196,26 +219,37 @@
     }
   }
 
-  #bookmarks tbody td {
+  table tbody tr, table tbody td {
+    height: 100%;
+  }
+
+  table tbody td {
     vertical-align: middle;
   }
 
-  #bookmarks tbody td:not(:last-child) {
-    padding: 0;
-  }
-
-  #bookmarks tbody td:not(:last-child) > a {
+  table tbody td:not(:last-child) > a,
+  #bookmarks tbody td:last-child > a {
     height: 100%;
     display: flex;
     align-items: center;
     padding: 10px;
   }
 
-  #bookmarks svg {
+  table tbody td:not(:last-child),
+  #bookmarks tbody td:last-child,
+  table tbody td:first-child a {
+    padding: 0;
+  }
+
+  table tbody td:first-child img {
+    max-width: 120px;
+  }
+
+  table svg {
     cursor: pointer;
   }
 
-  #bookmarks svg:hover #dislike path {
+  table svg:hover #dislike path {
     fill: red;
   }
 </style>

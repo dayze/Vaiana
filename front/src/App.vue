@@ -8,6 +8,7 @@
     <main>
       <router-view/>
     </main>
+    <footer-layout></footer-layout>
   </div>
 </template>
 
@@ -37,12 +38,24 @@
 </script>
 
 <style>
+  html,
   body {
-    font-size: 1.05em;
+    height: 100%
+  }
+
+  body {
+    margin: 0
+  }
+
+  #app {
+    display: table;
+    width: 100%;
+    height: 100%;
   }
 
   main {
     margin-top: 75px;
+    margin-bottom: 75px;
   }
 
   input, a {
