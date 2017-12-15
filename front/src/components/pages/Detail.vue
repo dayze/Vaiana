@@ -96,7 +96,7 @@
               </div>
             </form>
             <a class="border-none bg-sunglow color-yang cursor-pointer hover-bg-sweet-potato transition-3 padding"
-               @click="toggle()">
+               @click="toggleModalReservation()">
               Réserver maintenant
             </a>
           </div>
@@ -273,6 +273,8 @@
 
     </div>
 
+    <modal-reservation  v-show="visible"></modal-reservation>
+
   </div>
 </template>
 
@@ -281,6 +283,7 @@
   import GoogleMapComponent from '../modules/GoogleMap.vue'
   import Comments from '../layouts/Comments'
   import CarouselComponentDetailed from '../modules/CarouselComponentDetailed'
+  import ModalReservation from '../layouts/ModalReservation'
   import vueSmoothScroll from 'vue-smooth-scroll'
   import Vue from 'vue'
 
@@ -291,7 +294,8 @@
       StarRatings,
       GoogleMapComponent,
       Comments,
-      CarouselComponentDetailed
+      CarouselComponentDetailed,
+      ModalReservation
     },
     name: 'Detail',
     data () {
@@ -303,12 +307,13 @@
         city: '',
         lat: Number,
         long: Number,
-        link: ''
+        link: '',
+        visible: false
       }
     },
     methods: {
-      toggle () {
-        this.$emit('toggle')
+      toggleModalReservation () {
+        this.visible = !this.visible
       },
       displayMore () {
         this.openMoreServices = !this.openMoreServices
