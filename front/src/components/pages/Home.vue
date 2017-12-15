@@ -1,7 +1,8 @@
 <template>
   <div id="home">
     <jumbo></jumbo>
-    <div id="about" class="row vh-100">
+    <span class="anchor" id="about"></span>
+    <div class="row vh-100">
       <div id="services" class="cell-8 margin-auto">
         <h3 class="txt-upper align-center txt-unset">Lorem ipsum dolor sit amet</h3>
         <p class="align-center"> Donec porta rutrum risus, vitae hendrerit felis mollis vel. Vestibulum lacinia, tellus
@@ -64,7 +65,13 @@
 
 <style>
   .vh-100{
-    height: 100vh;
+    height: calc(100vh - 75px);
+  }
+  .anchor{
+    display:block;
+    height:75px; /* this is the height of your header */
+    margin-top:-75px; /* this is again negative value of the height of your header */
+    visibility:hidden;
   }
   #services{
     margin-top: 100px;

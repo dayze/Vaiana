@@ -1,5 +1,5 @@
 <template>
-  <footer id="footer" class="bg-deep-blue color-yang">
+  <footer id="contact" class="bg-deep-blue color-yang">
     <div class="row flex-y-center flex-x-center">
       <!-- FORM NEWS LETTER -->
         <div class="cell-6 c-12-l align-center">
@@ -38,10 +38,6 @@
 </script>
 
 <style>
-  footer{
-    display: table-row;
-  }
-
   .icons{
     display: inline-flex;
     justify-content: center;
@@ -82,5 +78,4 @@
       font-size: 1.5rem;
     }
   }
-
 </style>
