@@ -1,15 +1,8 @@
 <template>
   <div id="home">
     <jumbo></jumbo>
-    <div id="about" class="row vh-100">
-      <div id="services" class="cell-8 margin-auto">
-        <h3 class="txt-upper align-center txt-unset">Lorem ipsum dolor sit amet</h3>
-        <p class="align-center"> Donec porta rutrum risus, vitae hendrerit felis mollis vel. Vestibulum lacinia, tellus
-          pulvinar aliquet vehicula, odio neque ornare augue, eu malesuada lorem ligula in neque. Curabitur ac interdum
-          justo. Morbi ac tristique libero. Cras finibus erat vel diam congue, ut imperdiet dui hendrerit. Cras eu tempus
-          eros.</p>
-      </div>
-    </div>
+    <span class="anchor" id="about"></span>
+    <services></services>
     <div class="row bg-clouds">
       <div class="cell-12 margin-50-top margin-50-bottom">
         <h2 class="align-center">Hôtels en promotion</h2>
@@ -28,11 +21,15 @@
 <script>
   import Jumbo from '../layouts/Jumbo.vue'
   import CarouselComponent from '../modules/CarouselComponent.vue'
+  import Icon from 'vue-awesome/components/Icon'
+  import Services from '../layouts/Services.vue'
 
   export default {
     components: {
       Jumbo,
-      CarouselComponent
+      CarouselComponent,
+      Icon,
+      Services
     },
     name: 'Home',
     data () {
@@ -63,10 +60,10 @@
 </script>
 
 <style>
-  .vh-100{
-    height: 100vh;
-  }
-  #services{
-    margin-top: 100px;
+  .anchor{
+    display:block;
+    height:75px; /* this is the height of your header */
+    margin-top:-75px; /* this is again negative value of the height of your header */
+    visibility:hidden;
   }
 </style>

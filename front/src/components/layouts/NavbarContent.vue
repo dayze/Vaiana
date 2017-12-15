@@ -11,7 +11,7 @@
         <a class="padding-30-m block-m hover-color-sunglow transition-2" href="/#about" title="A propos">A propos</a>
       </li>
       <li class="bg-deep-blue-m border-yang border-bottom-m">
-        <a class="padding-30-m block-m hover-color-sunglow transition-2" href="/#footer" title="Contact">Contact</a>
+        <a class="padding-30-m block-m hover-color-sunglow transition-2" href="/#contact" title="Contact">Contact</a>
       </li>
       <li class="bg-deep-blue-m border-yang">
         <a class="padding-30-m block-m hover-color-sunglow transition-2" @click="toggle()" title="Connexion">Se connecter</a>
