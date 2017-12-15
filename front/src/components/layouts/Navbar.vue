@@ -8,7 +8,7 @@
     <!-- LOGO -->
     <div class="cell-5 c-6-m align-left align-center-m">
       <h1 class="transition-3 margin-0 txt-unset txt-size-big txt-size-normal-xs txt-upper">
-        <a href="/" class="inline-block" title="Accueil">Booking Day</a>
+        <router-link class="inline-block" :to="{ path: '/' }" title="Accueil">Booking Day</router-link>
       </h1>
     </div>
 

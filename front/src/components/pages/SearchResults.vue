@@ -45,10 +45,9 @@
               </h4>
             </div>
             <div class="cell-4">
-              <a href="#" class="bg-sunglow hover-bg-yang border transition-3 border-sunglow hover-color-sunglow padding-10 color-yang block align-center"
-                 title="Plus de détails">
+              <router-link :to="{ path: 'detail' }" class="bg-sunglow hover-bg-yang border transition-3 border-sunglow hover-color-sunglow padding-10 color-yang block align-center" title="Plus de détails">
                 Plus de détails
-              </a>
+              </router-link>
             </div>
             <div class="cell-4">
               <a href="#" class="bg-sweet-potato hover-bg-yang border transition-3 border-sweet-potato hover-color-sweet-potato padding-10 color-yang block align-center"
@@ -99,10 +98,9 @@
               </h4>
             </div>
             <div class="cell-4">
-              <a href="#" class="bg-sunglow hover-bg-yang border transition-3 border-sunglow hover-color-sunglow padding-10 color-yang block align-center"
-                 title="Plus de détails">
+              <router-link :to="{ path: 'detail' }" class="bg-sunglow hover-bg-yang border transition-3 border-sunglow hover-color-sunglow padding-10 color-yang block align-center" title="Plus de détails">
                 Plus de détails
-              </a>
+              </router-link>
             </div>
             <div class="cell-4">
               <a href="#" class="bg-sweet-potato hover-bg-yang border transition-3 border-sweet-potato hover-color-sweet-potato padding-10 color-yang block align-center"
@@ -152,10 +150,9 @@
               </h4>
             </div>
             <div class="cell-4">
-              <a href="#" class="bg-sunglow hover-bg-yang border transition-3 border-sunglow hover-color-sunglow padding-10 color-yang block align-center"
-                 title="Plus de détails">
+              <router-link :to="{ path: 'detail' }" class="bg-sunglow hover-bg-yang border transition-3 border-sunglow hover-color-sunglow padding-10 color-yang block align-center" title="Plus de détails">
                 Plus de détails
-              </a>
+              </router-link>
             </div>
             <div class="cell-4">
               <a href="#" class="bg-sweet-potato hover-bg-yang border transition-3 border-sweet-potato hover-color-sweet-potato padding-10 color-yang block align-center"

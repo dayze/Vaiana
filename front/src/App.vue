@@ -46,19 +46,16 @@
     height: 100%
   }
 
-  body {
-    margin: 0
-  }
-
   #app {
-    display: table;
-    width: 100%;
-    height: 100%;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
   }
 
   main {
     margin-top: 75px;
     margin-bottom: 75px;
+    flex: 1;
   }
 
   input, a {

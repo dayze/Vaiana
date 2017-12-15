@@ -1,5 +1,5 @@
   <template>
-  <form method="post" class="flex-form styled-form padding padding-0-bottom">
+  <form action="/results" class="flex-form styled-form padding padding-0-bottom">
     <div class="field-box">
       <input type="text" name="localisation" placeholder="Caen" required="required" v-model="city">
     </div>
