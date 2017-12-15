@@ -250,10 +250,10 @@
               52 Quai Amiral Hamelin, 14000 Caen, France
             </li>
             <li>
-              <a href="tel:01 23 45 67 89">01 23 45 67 89</a>
+              <a href="tel:01 23 45 67 89" class="color-green-lagoon transition-3 hover-color-sweet-potato">01 23 45 67 89</a>
             </li>
             <li>
-              <a href="malto:hotel@exemple.com">hotel@exemple.com</a>
+              <a href="malto:hotel@exemple.com" class="color-green-lagoon transition-3 hover-color-sweet-potato">hotel@exemple.com</a>
             </li>
           </ul>
         </div>
@@ -263,7 +263,7 @@
             <google-map-component :latitude="this.lat" :longitude="this.long"></google-map-component>
           </div>
           <div class="margin align-center">
-            <a :href="this.link" class="padding">Ouvrir avec Google Map</a>
+            <a :href="this.mapLink" class="padding color-green-lagoon transition-3 hover-color-sweet-potato" target="_blank">Ouvrir avec Google Map</a>
           </div>
         </div>
       </div>
@@ -303,7 +303,7 @@
         city: '',
         lat: Number,
         long: Number,
-        link: ''
+        mapLink: ''
       }
     },
     methods: {
@@ -447,10 +447,6 @@
 
   #add-to-favorites:hover path {
     fill: #789F8A;
-  }
-
-  #contact a {
-    color: #D9B44A;
   }
 
 </style>
