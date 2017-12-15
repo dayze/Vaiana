@@ -11,23 +11,23 @@
             <ul class="list-inline list-unstyled">
               <li>
                 <a href="#presentation" title="Voir la présentation" class="color-deep-blue hover-color-green-lagoon"
-                   v-smooth-scroll="{duration: 4000, offset: -50}">Présentation</a>
+                   v-smooth-scroll="{duration: 1000, offset: -50}">Présentation</a>
               </li>
               <li>
                 <a href="#services" title="Voir les services"
-                   class="color-deep-blue hover-color-green-lagoon" v-smooth-scroll="{duration: 4000, offset: -50}">Services</a>
+                   class="color-deep-blue hover-color-green-lagoon" v-smooth-scroll="{duration: 1000, offset: -50}">Services</a>
               </li>
               <li>
                 <a href="#comments" title="Voir les commentaires" class="color-deep-blue hover-color-green-lagoon"
-                   v-smooth-scroll="{duration: 4000, offset: -50}">Commentaires</a>
+                   v-smooth-scroll="{duration: 1000, offset: -50}">Commentaires</a>
               </li>
               <li>
                 <a href="#contact" title="Contacter l'hôtel"
-                   class="color-deep-blue hover-color-green-lagoon" v-smooth-scroll="{duration: 4000, offset: -50}">Contact</a>
+                   class="color-deep-blue hover-color-green-lagoon" v-smooth-scroll="{duration: 1000, offset: -50}">Contact</a>
               </li>
               <li>
                 <a href="#map" title="Voir l'emplacement"
-                   class="color-deep-blue hover-color-green-lagoon" v-smooth-scroll="{duration: 4000, offset: -50}">Emplacement</a>
+                   class="color-deep-blue hover-color-green-lagoon" v-smooth-scroll="{duration: 1000, offset: -50}">Emplacement</a>
               </li>
             </ul>
           </nav>
