@@ -3,10 +3,10 @@
     <ul
       class="list-unstyled list-inline list-separator list-block-s align-center-s list-no-separator color-clouds-s padding-top-s">
       <li class="padding-s border-bottom-s bg-green-lagoon-s border-yang">
-        <a class="hover-color-green-lagoon" href="#" title="Rechercher">Rechercher</a>
+        <router-link class="hover-color-green-lagoon" :to="{ path: 'results' }" title="Rechercher">Rechercher</router-link>
       </li>
       <li class="padding-s border-bottom-s bg-green-lagoon-s border-yang">
-        <a class="hover-color-green-lagoon" href="#" title="Mon Compte">Mon compte</a>
+        <router-link class="hover-color-green-lagoon" :to="{ path: 'user' }" title="Mon compte">Mon compte</router-link>
       </li>
       <li class="padding-s border-bottom-s bg-green-lagoon-s border-yang">
         <a class="hover-color-green-lagoon" href="#" title="A propos">A propos</a>
