@@ -4,8 +4,8 @@
     <span></span>
     <span></span>
     <span></span>
-    <div id="menuBurger" :class="{move: !isChecked}" class="transition-2">
-      <div class="align-left padding cursor-pointer" @click="toggle()">X</div>
+    <div id="menuBurger" :class="{move: !isChecked}" class="transition-2" @click="toggle()">
+      <div class="align-center padding cursor-pointer">Fermer</div>
       <navbar-content v-on:toggle="toggleModal()"></navbar-content>
     </div>
   </div>
