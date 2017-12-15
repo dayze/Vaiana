@@ -9,6 +9,7 @@
       <router-view/>
     </main>
     <footer-layout></footer-layout>
+    <back-to-top></back-to-top>
   </div>
 </template>
 
@@ -16,12 +17,14 @@
   import Navbar from '@/components/layouts/Navbar'
   import ModalConnexion from '@/components/layouts/ModalConnexion'
   import FooterLayout from '@/components/layouts/FooterLayout'
+  import BackToTop from '@/components/modules/BackToTop'
 
   export default {
     components: {
       Navbar,
       ModalConnexion,
-      FooterLayout
+      FooterLayout,
+      BackToTop
     },
     name: 'app',
     data () {
