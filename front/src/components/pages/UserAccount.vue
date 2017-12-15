@@ -131,9 +131,9 @@
             </div>
             <h4>Adresse de facturation</h4>
             <div class="inline-field padding-bottom">
-              <input type="text" class="margin-right" name="date" required="required" placeholder="Numéro de voie">
-              <input type="text" class="margin-right" name="date" required="required" placeholder="Adresse">
-              <input type="text" class="margin-right" name="date" required="required" placeholder="Ville">
+              <input type="text" class="" name="date" required="required" placeholder="Numéro de voie">
+              <input type="text" class="" name="date" required="required" placeholder="Adresse">
+              <input type="text" class="" name="date" required="required" placeholder="Ville">
               <input type="text" name="date" required="required" placeholder="Complement">
             </div>
             <div class="actions-box">
