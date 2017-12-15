@@ -322,7 +322,7 @@
       this.city = 'La Ferté Mathet'
       this.lat = 49.276656
       this.long = -0.2586579999999685
-      this.mapLink = `https://www.google.fr/maps/@${this.lat},${this.long},14z`
+      this.mapLink = `https://www.google.com/maps/search/?api=1&query=${this.lat},${this.long}`
       for (let i = 1; i <= 3; i++) {
         this.persons.push({
           id: i,
