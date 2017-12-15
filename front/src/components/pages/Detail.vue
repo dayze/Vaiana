@@ -250,14 +250,20 @@
               52 Quai Amiral Hamelin, 14000 Caen, France
             </li>
             <li>
-              12 06 06 06 06
+              <a href="tel:01 23 45 67 89">01 23 45 67 89</a>
+            </li>
+            <li>
+              <a href="malto:hotel@exemple.com">hotel@exemple.com</a>
             </li>
           </ul>
         </div>
         <!-- MAP -->
         <div id="map" class="cell-12">
           <div class="map-container">
-            <google-map-component :latitude="49.276656" :longitude="-0.2586579999999685"></google-map-component>
+            <google-map-component :latitude="this.lat" :longitude="this.long"></google-map-component>
+          </div>
+          <div class="margin align-center">
+            <a :href="this.link" class="padding">Ouvrir avec Google Map</a>
           </div>
         </div>
       </div>
@@ -294,7 +300,10 @@
         persons: [],
         images: [],
         name: '',
-        city: ''
+        city: '',
+        lat: Number,
+        long: Number,
+        link: ''
       }
     },
     methods: {
@@ -311,6 +320,9 @@
     created () {
       this.name = 'Hotel California'
       this.city = 'La Ferté Mathet'
+      this.lat = 49.276656
+      this.long = -0.2586579999999685
+      this.mapLink = `https://www.google.fr/maps/@${this.lat},${this.long},14z`
       for (let i = 1; i <= 3; i++) {
         this.persons.push({
           id: i,
@@ -435,6 +447,10 @@
 
   #add-to-favorites:hover path {
     fill: #789F8A;
+  }
+
+  #contact a {
+    color: #D9B44A;
   }
 
 </style>
