@@ -25,7 +25,7 @@
   #jumbo {
     /* background-position-y: -150px;*/
     min-height: 400px;
-    height: 100vh;
+    height: calc(100vh - 75px);
     background-size: cover;
     background: url(../../assets/media/img/pexels-photo-97904.jpeg) fixed center no-repeat;
     background-size: cover;

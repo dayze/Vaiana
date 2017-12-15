@@ -24,37 +24,60 @@
       <div class="cell-9 cell-12-s">
         <div class="show-s" :class="{'hide': !isCurrentTab(0)}">
           <h3 class="align-center">Mes réservations</h3>
-          <table class="styled-table">
+          <table id="bookmarks" class="styled-table">
             <thead>
             <tr>
               <th>Hôtel</th>
+              <th>Nom</th>
+              <th>Ville</th>
               <th>Date</th>
-              <th>Personnes</th>
+              <th>Plage horaire</th>
+              <th>Heure d'arrivée</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-              <td><img src="../../assets/media/fake/promoHotels/hotel-promo1.jpg" alt="">
-              </td>
-              <td>15/06/2018 12h-17h</td>
               <td>
-                <select>
-                  <template v-for="(n, index) in 5">
-                    <option value="valeur1">{{n}}</option>
-                  </template>
-                </select>
+                <router-link :to="{ path: 'detail' }">
+                  <img src="../../assets/media/fake/promoHotels/hotel-promo1.jpg" alt="">
+                </router-link>
+              </td>
+              <td>
+                <router-link :to="{ path: 'detail' }">Taverne de la paix</router-link>
+              </td>
+              <td>
+                <router-link :to="{ path: 'detail' }">La Ferté-Macé</router-link>
+              </td>
+              <td>
+                <router-link :to="{ path: 'detail' }">15/06/2018</router-link>
+              </td>
+              <td>
+                <router-link :to="{ path: 'detail' }">08h - 17h</router-link>
+              </td>
+              <td>
+                <router-link :to="{ path: 'detail' }">12h</router-link>
               </td>
             </tr>
             <tr>
-              <td><img src="../../assets/media/fake/promoHotels/hotel-promo2.jpg" alt="">
-              </td>
-              <td>16/06/2018 08h-17h</td>
               <td>
-                <select>
-                  <template v-for="(n, index) in 5">
-                    <option value="valeur1">{{n}}</option>
-                  </template>
-                </select>
+                <router-link :to="{ path: 'detail' }">
+                  <img src="../../assets/media/fake/promoHotels/hotel-promo2.jpg" alt="">
+                </router-link>
+              </td>
+              <td>
+                <router-link :to="{ path: 'detail' }">Inter-Hôtel de France</router-link>
+              </td>
+              <td>
+                <router-link :to="{ path: 'detail' }">Caen</router-link>
+              </td>
+              <td>
+                <router-link :to="{ path: 'detail' }">16/06/2018</router-link>
+              </td>
+              <td>
+                <router-link :to="{ path: 'detail' }">08h - 17h</router-link>
+              </td>
+              <td>
+                <router-link :to="{ path: 'detail' }">08h</router-link>
               </td>
             </tr>
             </tbody>
@@ -62,7 +85,7 @@
         </div>
         <div class="show-s" :class="{'hide': !isCurrentTab(1)}">
           <h3 class="align-center">Mes hôtels favoris</h3>
-          <table class="styled-table">
+          <table id="favorites" class="styled-table">
             <thead>
             <tr>
               <th>Hôtel</th>
@@ -204,7 +227,8 @@
     vertical-align: middle;
   }
 
-  table tbody td:not(:last-child) > a {
+  table tbody td:not(:last-child) > a,
+  #bookmarks tbody td:last-child > a {
     height: 100%;
     display: flex;
     align-items: center;
@@ -212,6 +236,7 @@
   }
 
   table tbody td:not(:last-child),
+  #bookmarks tbody td:last-child,
   table tbody td:first-child a {
     padding: 0;
   }
