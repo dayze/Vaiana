@@ -2,7 +2,6 @@
   <div class="container-tiny margin-auto">
     <div class="row flex-row margin-auto flex-y-center flex-y-stretch-xs flex-x-center align-center-m">
 
-
       <form method="post" class="flex-form styled-form">
         <fieldset class="border-none bg-clouds width-100 padding-30">
           <legend class="bg-green-lagoon padding color-yang margin-bottom">Réserver maintenant</legend>
