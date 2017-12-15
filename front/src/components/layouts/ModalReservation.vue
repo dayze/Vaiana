@@ -64,6 +64,11 @@
         phoneNumber: '',
         spinning: false
       }
+    },
+    methods: {
+      toggleModalReservation () {
+        this.$parent.toggleModalReservation()
+      }
     }
 
   }
@@ -77,7 +82,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 1001;
   }
 
   #modal-content {

@@ -1,6 +1,6 @@
 <template>
   <div class="bg-clouds flex flex-x-center">
-    <div class="container overlay floats-box cell-6 cell-10-m">
+    <div class="container overlay floats-box cell-6-margin-0 cell-10-m">
       <div class="info absolute-row-top bg-clouds-opac-7 txt-size-small-s">
         <h3 class="name margin color-deep-blue">
           {{this.name}}
