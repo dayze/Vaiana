@@ -9,10 +9,10 @@
         <router-link class="hover-color-green-lagoon" :to="{ path: 'user' }" title="Mon compte">Mon compte</router-link>
       </li>
       <li class="padding-m border-bottom-m bg-green-lagoon-m border-yang">
-        <a class="hover-color-green-lagoon" href="#" title="A propos">A propos</a>
+        <a class="hover-color-green-lagoon" href="/#about" title="A propos">A propos</a>
       </li>
       <li class="padding-m bg-green-lagoon-m border-yang border-bottom-m">
-        <a class="hover-color-green-lagoon" href="#" title="Contact">Contact</a>
+        <a class="hover-color-green-lagoon" href="/#footer" title="Contact">Contact</a>
       </li>
       <li class="padding-m bg-green-lagoon-m border-yang">
         <a class="hover-color-green-lagoon" @click="toggle()" title="Connexion">Se connecter</a>

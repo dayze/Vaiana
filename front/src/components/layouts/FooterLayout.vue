@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-deep-blue color-yang">
+  <footer id="footer" class="bg-deep-blue color-yang">
     <div class="row flex-y-center flex-x-center">
       <!-- FORM NEWS LETTER -->
         <div class="cell-6 c-12-l align-center">
