@@ -1,40 +1,43 @@
 <template>
   <div id="comments" class="row margin">
-    <div class="cell-12 margin-auto flex">
-      <div class="cell-8 cell-12-m margin-auto">
-        <div class="align-center">
-          <h2>Commentaires</h2>
-        </div>
-        <div>
-          <form method="post" class="flex-form styled-form padding padding-0-bottom">
-            <div class="field-box">
-              <input type="text" name="firstname" value="John" required="required" disabled>
-            </div>
-            <div class="field-box">
-              <input type="text" name="name" value="Doe" required="required" disabled>
-            </div>
-            <div class="field-box">
+    <div class="cell-12">
+      <h2 class="color-green-lagoon">Commentaires</h2>
+      <div class="cell-12 margin-auto flex">
+        <div class="cell-8 cell-12-m margin-auto">
+          <div class="align-center">
+            <h2>Commentaires</h2>
+          </div>
+          <div>
+            <form method="post" class="flex-form styled-form padding padding-0-bottom">
+              <div class="field-box">
+                <input type="text" name="firstname" value="John" required="required" disabled>
+              </div>
+              <div class="field-box">
+                <input type="text" name="name" value="Doe" required="required" disabled>
+              </div>
+              <div class="field-box">
             <textarea class="margin-auto border-clouds round padding width-100" rows="10" type="text" name="comment"
                       placeholder="Entrez un commentaire" required="required"></textarea>
-            </div>
-            <div class="actions-box">
-              <input type="submit" value="Envoyer"
-                     class="border-none bg-sunglow color-yang cursor-pointer hover-bg-sweet-potato transition-3"/>
-            </div>
-          </form>
+              </div>
+              <div class="actions-box">
+                <input type="submit" value="Envoyer"
+                       class="border-none bg-sunglow color-yang cursor-pointer hover-bg-sweet-potato transition-3"/>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-    <div v-for="person in persons" :key="person.id" class="cell-4 cell-12-m border-green-lagoon-bottom">
-      <div class="comment">
-        <div class="header flex flex-column flex-x-center flex-y-center">
-          <img :src="getImgUrl(person)" class="circle margin">
-          <star-ratings :note="4"></star-ratings>
-          <h4 class="margin">{{person.name}}</h4>
-          <h5 class="margin">{{person.date}}</h5>
-        </div>
-        <div class="comment align-justify">
-          {{person.comment}}
+      <div v-for="person in persons" :key="person.id" class="cell-4 cell-12-m border-green-lagoon-bottom">
+        <div class="comment">
+          <div class="header flex flex-column flex-x-center flex-y-center">
+            <img :src="getImgUrl(person)" class="circle margin">
+            <star-ratings :note="4"></star-ratings>
+            <h4 class="margin">{{person.name}}</h4>
+            <h5 class="margin">{{person.date}}</h5>
+          </div>
+          <div class="comment align-justify">
+            {{person.comment}}
+          </div>
         </div>
       </div>
     </div>

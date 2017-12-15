@@ -10,22 +10,24 @@
           <nav class="border-bottom border-silver padding-10-top-bottom">
             <ul class="list-inline list-unstyled">
               <li>
-                <a href="#presentation" title="Voir la présentation" class="color-deep-blue hover-color-green-lagoon">Présentation</a>
+                <a href="#presentation" title="Voir la présentation" class="color-deep-blue hover-color-green-lagoon"
+                   v-smooth-scroll="{duration: 4000, offset: -50}">Présentation</a>
               </li>
               <li>
                 <a href="#services" title="Voir les services"
-                   class="color-deep-blue hover-color-green-lagoon">Services</a>
+                   class="color-deep-blue hover-color-green-lagoon" v-smooth-scroll="{duration: 4000, offset: -50}">Services</a>
               </li>
               <li>
-                <a href="#comments" title="Voir les commentaires" class="color-deep-blue hover-color-green-lagoon">Commentaires</a>
+                <a href="#comments" title="Voir les commentaires" class="color-deep-blue hover-color-green-lagoon"
+                   v-smooth-scroll="{duration: 4000, offset: -50}">Commentaires</a>
               </li>
               <li>
                 <a href="#contact" title="Contacter l'hôtel"
-                   class="color-deep-blue hover-color-green-lagoon">Contact</a>
+                   class="color-deep-blue hover-color-green-lagoon" v-smooth-scroll="{duration: 4000, offset: -50}">Contact</a>
               </li>
               <li>
                 <a href="#map" title="Voir l'emplacement"
-                   class="color-deep-blue hover-color-green-lagoon">Emplacement</a>
+                   class="color-deep-blue hover-color-green-lagoon" v-smooth-scroll="{duration: 4000, offset: -50}">Emplacement</a>
               </li>
             </ul>
           </nav>
@@ -36,7 +38,7 @@
       <div id="presentation" class="row">
         <div class="row">
           <div class="cell-8 c-12-s padding-right padding-0-s">
-            <h2>Présentation</h2>
+            <h2 class="color-green-lagoon">Présentation</h2>
             <h3 class="margin-0 inline-block">The Joshua Tree House</h3>
             <svg id="add-to-favorites" class="margin-left" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
                  viewBox="0 0 512 512">
@@ -70,20 +72,33 @@
               <span>€</span>
             </h4>
             <star-ratings :note="4"></star-ratings>
-            <a href="#comments" title="Voir les commentaires" class="txt-size-small margin-0-top">Voir tous les avis
-              &rarr;</a>
-            <form method="post" class="flex-form styled-form padding margin-bottom">
+            <a href="#comments" title="Voir les commentaires" class="txt-size-small margin-0-top"
+               v-smooth-scroll="{duration: 5000, offset: -50}">Voir tous les avis &rarr;</a>
+
+            <!-- <form onsubmit="toggle()" class="flex-form styled-form padding margin-bottom">
+               <div class="field-box">
+                 <label for="reservation-date">
+                   Votre date d'arrivée :
+                 </label>
+                 <input id="reservation-date" type="date" name="date" required="required">
+               </div>
+               <div class="actions-box">
+                 <input type="submit" value="Réserver maintenant"
+                        class="border-none bg-sunglow color-yang cursor-pointer hover-bg-sweet-potato transition-3"/>
+               </div>
+             </form>-->
+            <form class="flex-form styled-form padding margin-top">
               <div class="field-box">
                 <label for="reservation-date">
                   Votre date d'arrivée :
                 </label>
                 <input id="reservation-date" type="date" name="date" required="required">
               </div>
-              <div class="actions-box">
-                <input type="submit" value="Réserver maintenant"
-                       class="border-none bg-sunglow color-yang cursor-pointer hover-bg-sweet-potato transition-3"/>
-              </div>
             </form>
+            <a class="border-none bg-sunglow color-yang cursor-pointer hover-bg-sweet-potato transition-3 padding"
+               @click="toggle()">
+              Réserver maintenant
+            </a>
           </div>
 
         </div>
@@ -93,7 +108,7 @@
       <!-- ### Services -->
       <div id="services" class="row">
         <div class="cell-12">
-          <h2>Services</h2>
+          <h2 class="color-green-lagoon">Services</h2>
         </div>
         <div class="cell-12">
           <div class="tabset">
@@ -226,7 +241,7 @@
       <!-- ### Contact -->
       <div id="contact" class="row">
         <div class="cell-12">
-          <h2>Contact</h2>
+          <h2 class="color-green-lagoon">Contact</h2>
           <ul class="list-unstyled">
             <li>
               The Joshua Tree House
@@ -266,6 +281,10 @@
   import GoogleMapComponent from '../modules/GoogleMap.vue'
   import Comments from '../layouts/Comments'
   import CarouselComponentDetailed from '../modules/CarouselComponentDetailed'
+  import vueSmoothScroll from 'vue-smooth-scroll'
+  import Vue from 'vue'
+
+  Vue.use(vueSmoothScroll)
 
   export default {
     components: {
@@ -288,6 +307,9 @@
       }
     },
     methods: {
+      toggle () {
+        this.$emit('toggle')
+      },
       displayMore () {
         this.openMoreServices = !this.openMoreServices
       },
