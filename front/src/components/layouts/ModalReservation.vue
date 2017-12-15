@@ -1,9 +1,10 @@
 <template>
-  <div class="container-tiny margin-auto">
-    <div class="row flex-row margin-auto flex-y-center flex-y-stretch-xs flex-x-center align-center-m">
-
-
+  <div id="modal">
+    <spinner :active="false"></spinner>
+    <div id="modal-content" class="round-5">
+      <span class="cursor-pointer align-right float-right" @click="toggle()">X</span>
       <form method="post" class="flex-form styled-form">
+
         <fieldset class="border-none bg-clouds width-100 padding-30">
           <legend class="bg-green-lagoon padding color-yang margin-bottom">Réserver maintenant</legend>
           <div class="field-box">
@@ -38,13 +39,50 @@
     </div>
   </div>
 </template>
-
 <script>
+  import Spinner from '../modules/Spinner.vue'
+
   export default {
-    name: 'BookForm'
+    props: {
+      isOpen: Boolean
+    },
+    components: {
+      Spinner
+    },
+    data () {
+      return {
+        firstName: '',
+        lastName: '',
+        email: '',
+        phoneNumber: '',
+        spinning: false
+      }
+    },
+    methods: {
+      toggle () {
+        this.$emit('toggle')
+      }
+    }
+
   }
 </script>
+<style scoped>
+  #modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
 
-<style>
-
+  #modal-content {
+    position: relative;
+    margin: 15% auto;
+    background-color: #fff;
+    width: 50%;
+    padding: 15px;
+  }
 </style>

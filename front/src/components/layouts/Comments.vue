@@ -1,7 +1,7 @@
 <template>
   <div id="comments" class="row margin">
     <div class="cell-12">
-      <h2>Commentaires</h2>
+      <h2 class="color-green-lagoon">Commentaires</h2>
     </div>
     <div v-for="person in persons" :key="person.id" class="cell-4 cell-12-m border-green-lagoon-bottom">
       <div class="comment">
