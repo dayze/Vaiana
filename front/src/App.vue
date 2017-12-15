@@ -55,6 +55,7 @@
 
   main {
     margin-top: 75px;
+    margin-bottom: 75px;
   }
 
   input, a {
