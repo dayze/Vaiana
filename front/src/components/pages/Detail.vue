@@ -27,7 +27,7 @@
               </li>
               <li>
                 <a href="#map" title="Voir l'emplacement"
-                   class="color-deep-blue hover-color-green-lagoon" v-smooth-scroll="{duration: 1000, offset: -50}">Emplacement</a>
+                   class="color-deep-blue hover-color-green-lagoon" v-smooth-scroll="{duration: 1000, offset: -90}">Emplacement</a>
               </li>
             </ul>
           </nav>
