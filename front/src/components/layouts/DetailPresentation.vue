@@ -55,16 +55,35 @@
 
     </div>
 
+    <modal-reservation v-show="visible"></modal-reservation>
+
   </div>
 </template>
 
 <script>
+  import StarRatings from '../modules/StarRatings.vue'
+  import ModalReservation from '../layouts/ModalReservation.vue'
+
   export default {
-    name: 'Presentation'
+    name: 'DetailPresentation',
+    components: {
+      StarRatings,
+      ModalReservation
+    },
+    data () {
+      return {
+        visible: false
+      }
+    },
+    methods: {
+      toggleModalReservation () {
+        this.visible = !this.visible
+      }
+    }
   }
 </script>
 
-<style scoped>
+<style>
   .grey-icon path {
     fill: #404852;
   }

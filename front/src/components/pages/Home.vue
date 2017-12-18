@@ -2,7 +2,7 @@
   <div id="home">
     <jumbo></jumbo>
     <span class="anchor" id="about"></span>
-    <services></services>
+    <services-layout></services-layout>
     <div class="row bg-clouds">
       <div class="cell-12 margin-50-top margin-50-bottom">
         <h2 class="align-center">Hôtels en promotion</h2>
@@ -22,14 +22,14 @@
   import Jumbo from '../layouts/Jumbo.vue'
   import CarouselComponent from '../modules/CarouselComponent.vue'
   import Icon from 'vue-awesome/components/Icon'
-  import Services from '../layouts/Services.vue'
+  import ServicesLayout from '../layouts/ServicesLayout.vue'
 
   export default {
     components: {
       Jumbo,
       CarouselComponent,
       Icon,
-      Services
+      ServicesLayout
     },
     name: 'Home',
     data () {
