@@ -1,7 +1,7 @@
 <template>
   <div id="modal">
     <spinner :active="false"></spinner>
-    <div id="modal-content" class="round-5">
+    <div id="modal-content" class="align-center round-5">
       <div class="row">
         <div class="cell-12 align-right">
           <svg @click="toggle()" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 21.9 21.9">
@@ -17,7 +17,7 @@
         <div class="field-box">
           <input type="password" placeholder="Mot de passe" name="password" required="required" v-model="password">
         </div>
-        <div @click="toggle()" class="border-none bg-sunglow color-yang cursor-pointer hover-bg-sweet-potato transition-3 padding round">
+        <div @click="toggle()" class="border-none margin-auto bg-sunglow color-yang cursor-pointer hover-bg-sweet-potato transition-3 padding round">
           <router-link :to="{ path: 'user' }">
             <span>Se connecter/S'inscrire</span>
           </router-link>
@@ -68,7 +68,7 @@
     position: relative;
     margin: 15% auto;
     background-color: #fff;
-    width: 50%;
+    width: 30%;
     padding: 15px;
   }
 </style>
