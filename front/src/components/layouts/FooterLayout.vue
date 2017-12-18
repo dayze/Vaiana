@@ -2,14 +2,14 @@
   <footer id="contact" class="bg-deep-blue color-yang">
     <div class="row flex-y-center flex-x-center">
       <!-- FORM NEWS LETTER -->
-      <div class="cell-6 c-12-l align-center">
+      <div class="cell-6 c-12-m align-center">
         <form class="form-responsive">
           <label class="" for="email">La newsletter Bookingday.fr : </label>
           <input class="padding-10 border-none" type="email" name="email" id="email" placeholder="email"/>
           <input type="submit" id="newsletter" value="S'inscrire" class="txt-upper padding-10 border-none bg-sunglow color-yang cursor-pointer hover-bg-sweet-potato transition-3"/>
         </form>
       </div>
-      <div class="cell-6 c-12-l icons">
+      <div class="cell-6 c-12-m icons">
         <i class="devicon-facebook-plain"></i>
         <i class="devicon-twitter-plain"></i>
         <i class="devicon-vuejs-plain"></i>
@@ -33,6 +33,7 @@
 </script>
 
 <style>
+
   .icons{
     display: inline-flex;
     justify-content: center;
@@ -42,7 +43,7 @@
     padding: 10px;
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 992px) {
     .form-responsive{
       display: -webkit-box;
       display: -ms-flexbox;

@@ -1,8 +1,8 @@
 <template>
   <div class="rating">
-    <span v-for="i in this.note" class="active">★</span><!--
+  <span v-for="i in this.note" class="active">★</span><!--
     --><span v-for="i in 5-this.note">★</span>
-  </div>
+</div>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="hide fixed flex-s flex-x-center flex-y-center flex-column width-100" id="filter-slide">
+  <div class="hide fixed flex-m flex-x-center flex-y-center flex-column width-100" id="filter-slide">
     <div id="filter" class="border-bottom border-silver-bottom width-100">
       <form class="flex-form flex-row styled-form">
         <div class="flex flex-column flex-y-center width-50">
@@ -14,25 +14,7 @@
         </div>
         <div class="flex flex-column flex-y-center width-50">
           <h4>Avis client</h4>
-          <ul class="margin-0 padding-0 list-unstyled">
-            <li>
-              <div class="rating">
-                <a><span class="fill-star">★</span><span class="fill-star">★</span><span class="fill-star">★</span><span
-                  class="fill-star">★</span><span>★</span></a>
-              </div>
-              <div class="rating">
-                <a><span class="fill-star">★</span><span class="fill-star">★</span><span
-                  class="fill-star">★</span><span>★</span><span>★</span></a>
-              </div>
-              <div class="rating">
-                <a><span class="fill-star">★</span><span
-                  class="fill-star">★</span><span>★</span><span>★</span><span>★</span></a>
-              </div>
-              <div class="rating">
-                <a><span class="fill-star">★</span><span>★</span><span>★</span><span>★</span><span>★</span></a>
-              </div>
-            </li>
-          </ul>
+          <star-ratingable class="margin-left"></star-ratingable>
         </div>
         <div class="flex flex-column flex-y-center width-50">
           <h4>Services</h4>
@@ -60,8 +42,12 @@
 
 <script>
   import Utils from '@/utils'
+  import StarRatingable from '../modules/StarRatingable'
 
   export default {
+    components: {
+      StarRatingable
+    },
     mounted () {
       this.filterIsDiplayed = false
       hideFilters()
@@ -109,6 +95,7 @@
   }
 
   #filter-slide button {
+    outline: none;
     background-color: #FFFFFF;
     color: inherit;
     border-radius: 0 0 5px 5px;
