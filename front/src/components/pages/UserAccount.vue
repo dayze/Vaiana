@@ -1,35 +1,35 @@
 <template>
   <div>
-    <div class="row container-medium margin-auto">
-      <div class="cell-3 border-right padding-right hide-s">
-        <ul class="list-unstyled align-center padding-top">
-          <tab-title :relatedTo="0" :isDefault="true" :classOnActive="'bg-peter-river'"
-                     :classOnInactive="'bg-deep-blue'">
-            <li class="padding color-clouds border-bottom cursor-pointer hover-bg-peter-river">
+    <div class="row margin-0" id="main-container">
+      <div class="cell-3-margin-0 border-right border-silver hide-s">
+        <ul class="list-unstyled align-center">
+          <tab-title :relatedTo="0" :isDefault="true" :classOnActive="'bg-sweet-potato'"
+                     :classOnInactive="'bg-sunglow'">
+            <li class="padding color-clouds border-bottom cursor-pointer hover-bg-sweet-potato">
               Mes réservations
             </li>
           </tab-title>
-          <tab-title :relatedTo="1" :classOnActive="'bg-peter-river'" :classOnInactive="'bg-deep-blue'">
-            <li class="padding hover-bg-peter-river color-clouds border-bottom cursor-pointer">
+          <tab-title :relatedTo="1" :classOnActive="'bg-sweet-potato'" :classOnInactive="'bg-sunglow'">
+            <li class="padding hover-bg-sweet-potato color-clouds border-bottom cursor-pointer">
               Mes hôtels favoris
             </li>
           </tab-title>
-          <tab-title :relatedTo="2" :classOnActive="'bg-peter-river'" :classOnInactive="'bg-deep-blue'">
-            <li class="padding hover-bg-peter-river color-clouds cursor-pointer border-bottom">
+          <tab-title :relatedTo="2" :classOnActive="'bg-sweet-potato'" :classOnInactive="'bg-sunglow'">
+            <li class="padding hover-bg-sweet-potato color-clouds cursor-pointer border-bottom">
               Mon profil
             </li>
           </tab-title>
-          <tab-title :relatedTo="3" :classOnActive="'bg-peter-river'" :classOnInactive="'bg-deep-blue'">
-            <li class="padding hover-bg-peter-river color-clouds cursor-pointer">
+          <tab-title :relatedTo="3" :classOnActive="'bg-sweet-potato'" :classOnInactive="'bg-sunglow'">
+            <li class="padding hover-bg-sweet-potato color-clouds cursor-pointer">
               Changer mon mot de passe
             </li>
           </tab-title>
         </ul>
       </div>
-      <div class="cell-9 cell-12-s">
+      <div class="cell-9 cell-12-s overflow padding">
         <tab :relatedTo="0">
           <div>
-            <h3 class="align-center">Mes réservations</h3>
+            <h3 class="align-center txt-upper txt-unset txt-size-medium txt-size-normal-s">Mes réservations</h3>
             <table id="bookmarks" class="styled-table">
               <thead>
               <tr>
@@ -92,7 +92,7 @@
         </tab>
         <tab :relatedTo="1">
           <div>
-            <h3 class="align-center">Mes hôtels favoris</h3>
+            <h3 class="align-center txt-upper txt-unset txt-size-medium txt-size-normal-s">Mes hôtels favoris</h3>
             <table id="favorites" class="styled-table">
               <thead>
               <tr>
@@ -157,7 +157,7 @@
         </tab>
         <tab :relatedTo="2">
           <div>
-            <h3 class="align-center">Mon profil</h3>
+            <h3 class="align-center txt-upper txt-unset txt-size-medium txt-size-normal-s">Mon profil</h3>
             <form method="post" class="flex-form styled-form">
               <div class="field-box">
                 <input type="text" name="email" placeholder="Email" required="required" value="vaiana@gmail.com">
@@ -178,7 +178,7 @@
         </tab>
         <tab :relatedTo="3">
           <div>
-            <h3 class="align-center">Changer mon mot de passe</h3>
+            <h3 class="align-center txt-upper txt-unset txt-size-medium txt-size-normal-s">Changer mon mot de passe</h3>
             <form method="post" class="flex-form styled-form">
               <div class="field-box">
                 <input type="password" name="oldPassword" placeholder="Ancien mot de passe" required="required"
@@ -207,6 +207,11 @@
   }
 </script>
 <style scoped lang="scss">
+
+  #main-container {
+    height: calc(100vh - 157px);
+  }
+
   .img-table {
     max-width: 80px;
   }
