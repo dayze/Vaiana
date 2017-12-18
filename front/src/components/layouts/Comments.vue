@@ -1,5 +1,5 @@
 <template>
-  <div id="comments" class="row margin">
+  <div id="comments" class="row margin margin-50-bottom">
     <h2 class="color-green-lagoon">Commentaires</h2>
       <div class="cell-12 margin-auto flex">
         <div class="cell-8 cell-12-m margin-auto margin-50-bottom">
