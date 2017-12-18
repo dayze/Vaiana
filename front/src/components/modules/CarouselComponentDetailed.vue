@@ -49,5 +49,6 @@
 <style scoped>
   .container {
     /*width: 50%;*/
+    margin-bottom: 20px;
   }
 </style>
