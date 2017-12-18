@@ -333,9 +333,11 @@
     },
     computed: {
       moreEquipementArrow: function () {
-        return '<svg viewBox="0 0 18 18" height="10px" width="10px">' +
+        return !this.openMoreServices ? '<svg viewBox="0 0 18 18" height="10px" width="10px">' +
           '<path d="m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z"></path>' +
-          '</svg>'
+          '</svg>' : '<svg xmlns="http://www.w3.org/2000/svg" height="10px" width="10px" viewBox="-44 46 10 10">' +
+        '<path d="M-43.1 53.6c-.2.2-.6.2-.8 0s-.2-.6 0-.8l4.4-4.4c.2-.2.6-.2.8 0l4.4 4.4c.2.2.2.6 0 .8s-.6.2-.8 0l-4-4.1-4 4.1z"/>' +
+        '</svg>'
       }
     },
     created () {
