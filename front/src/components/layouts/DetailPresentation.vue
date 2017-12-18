@@ -39,15 +39,15 @@
         <a href="#comments" title="Voir les commentaires" class="txt-size-small margin-0-top"
            v-smooth-scroll="{duration: 5000, offset: -50}">Voir tous les avis &rarr;</a>
 
-        <form class="flex-form styled-form padding margin-top">
-          <div class="field-box">
+        <form class="flex-form styled-form padding margin-top padding-0-bottom">
+          <div class="field-box margin-0-bottom">
             <label for="reservation-date">
               Votre date d'arrivée :
             </label>
             <input id="reservation-date" type="date" name="date" required="required">
           </div>
         </form>
-        <a class="border-none bg-sunglow color-yang cursor-pointer hover-bg-sweet-potato transition-3 padding"
+        <a class="inline-block margin border-none bg-sunglow color-yang cursor-pointer hover-bg-sweet-potato transition-3 padding"
            @click="toggleModalReservation()">
           Réserver maintenant
         </a>

@@ -89,7 +89,7 @@
     position: relative;
     margin: 15% auto;
     background-color: #fff;
-    width: 50%;
+    width: 80%;
     padding: 15px;
   }
 </style>
