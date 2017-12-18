@@ -34,77 +34,7 @@
         </div>
       </div>
 
-      <!-- ### Presentation -->
-      <div id="presentation" class="row">
-        <div class="row">
-          <div class="cell-8 c-12-s padding-right padding-0-s">
-            <h2 class="color-green-lagoon">Présentation</h2>
-            <h3 class="margin-0 inline-block">The Joshua Tree House</h3>
-            <svg id="add-to-favorites" class="margin-left grey-icon" xmlns="http://www.w3.org/2000/svg" width="30"
-                 height="30"
-                 viewBox="0 0 512 512">
-              <g>
-                <title>Ajouter à mes favoris</title>
-                <path
-                  d="M461.46 63.908c-32.596-32.486-75.818-50.279-121.632-50.138-29.542.1-58.327 7.738-83.828 22.17-25.506-14.435-54.3-22.074-83.846-22.17l-.572-.001c-45.622 0-88.595 17.796-121.048 50.145C17.946 96.396 0 139.524 0 185.354c0 43.787 16.495 85.478 46.444 117.392l165.585 176.447c11.352 12.098 27.377 19.037 43.969 19.038 16.593 0 32.62-6.939 43.973-19.037l165.585-176.448C495.505 270.832 512 229.142 512 185.354c0-45.833-17.949-88.964-50.54-121.446zm-17.78 218.309L278.094 458.666a30.411 30.411 0 0 1-22.095 9.565 30.412 30.412 0 0 1-22.094-9.566L68.318 282.216C43.609 255.885 30 221.485 30 185.354c0-37.799 14.813-73.381 41.713-100.193 26.791-26.704 62.242-41.393 99.873-41.393l.471.001c26.806.087 52.852 7.692 75.358 21.995 4.833 3.364 11.413 3.691 16.675.315 22.615-14.505 48.839-22.22 75.838-22.311l.486-.001c37.626 0 73.079 14.688 99.868 41.388C467.185 111.968 482 147.553 482 185.354c0 36.131-13.609 70.531-38.32 96.863z"/>
-              </g>
-            </svg>
-            <h3>Ouistreham</h3>
-            <ul class="list-inline list-unstyled">
-              <li>
-                3 personnes
-              </li>
-              <li>
-                2 lits (1 lit double et 1 lit simple)
-              </li>
-            </ul>
-            <p class="padding-10-top-bottom">
-              Quibus occurrere bene pertinax miles explicatis ordinibus parans hastisque feriens scuta qui habitus iram
-              pugnantium concitat et dolorem proximos iam gestu terrebat sed eum in certamen alacriter consurgentem
-              revocavere ductores rati intempestivum anceps subire certamen cum haut longe muri distarent, quorum tutela
-              securitas poterat in solido locari cunctorum.
-            </p>
-          </div>
-
-          <div class="cell-4 bg-clouds align-center c-12-s">
-            <h4 class="color-deep-blue">
-              <span class="color-wet-asphalt txt-unstyled margin-right">à partir de :</span>
-              <span class="txt-size-big">45</span>
-              <span>€</span>
-            </h4>
-            <star-ratings :note="4"></star-ratings>
-            <a href="#comments" title="Voir les commentaires" class="txt-size-small margin-0-top"
-               v-smooth-scroll="{duration: 5000, offset: -50}">Voir tous les avis &rarr;</a>
-
-            <!-- <form onsubmit="toggle()" class="flex-form styled-form padding margin-bottom">
-               <div class="field-box">
-                 <label for="reservation-date">
-                   Votre date d'arrivée :
-                 </label>
-                 <input id="reservation-date" type="date" name="date" required="required">
-               </div>
-               <div class="actions-box">
-                 <input type="submit" value="Réserver maintenant"
-                        class="border-none bg-sunglow color-yang cursor-pointer hover-bg-sweet-potato transition-3"/>
-               </div>
-             </form>-->
-            <form class="flex-form styled-form padding margin-top">
-              <div class="field-box">
-                <label for="reservation-date">
-                  Votre date d'arrivée :
-                </label>
-                <input id="reservation-date" type="date" name="date" required="required">
-              </div>
-            </form>
-            <a class="border-none bg-sunglow color-yang cursor-pointer hover-bg-sweet-potato transition-3 padding"
-               @click="toggleModalReservation()">
-              Réserver maintenant
-            </a>
-          </div>
-
-        </div>
-
-      </div>
+      <presentation></presentation>
 
       <!-- ### Services -->
       <div id="services" class="row">
@@ -171,22 +101,33 @@
                     </svg>
                     <span class="margin-10-left">Sèche-cheveux</span>
                   </div>
-                  <div class="cell-12">
+                  <div class="width-100">
                     <div class="row margin-bottom" v-if="openMoreServices">
-                      <div class="cell-12-margin-0">
-                        coucou
+                      <div class="cell-3 flex flex-y-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="grey-icon" width="20" height="20"
+                             viewBox="0 0 492 492">
+                          <path
+                            d="M492 420.5c-10.667 0-20.667-2.333-30-7-10.668-4.667-21.334-7-32-7-10.667 0-21 2.333-31 7-9.333 4.667-19.333 7-30 7s-20.667-2.333-30-7c-10.668-4.667-21.335-7-32-7-10.667 0-21 2.333-31 7-9.333 4.667-19.333 7-30 7s-20.667-2.333-30-7c-10-4.667-20.333-7-31-7s-21.333 2.333-32 7c-9.333 4.667-19.333 7-30 7s-20.667-2.333-30-7c-10-4.667-20.333-7-31-7s-21 2.333-31 7-20.333 7-31 7v-45c10.667 0 21-2.333 31-7s20.333-7 31-7 21 2.333 31 7 20.167 7 30.5 7 20.167-2.333 29.5-7c10-4.667 20.5-7 31.5-7s21.5 2.333 31.5 7 20.167 7 30.5 7c10.334 0 20.167-2.333 29.5-7 10-4.667 20.667-7 32-7 10 0 20.333 2.333 31 7 9.335 4.667 19.168 7 29.5 7 10.333 0 20.5-2.333 30.5-7s20.5-7 31.5-7 21.5 2.333 31.5 7c9.333 4.667 19.333 7 30 7v45zM421 292.5c16 0 29.667-5.667 41-17s17-25 17-41-5.667-29.667-17-41-25.167-17-41.5-17-30.167 5.667-41.5 17-17 25-17 41c0 16.667 5.5 30.5 16.5 41.5s25.167 16.5 42.5 16.5z"/>
+                          <path
+                            d="M80 325.5c4 .667 8.333 2 13 4 10 4.667 20.167 7 30.5 7s20.167-2.333 29.5-7c10.667-4.667 21.167-7 31.5-7s20.833 2.333 31.5 7c10 4.667 20.167 7 30.5 7 10.334 0 20.167-2.333 29.5-7 10.667-4.667 21.167-7 31.5-7s20.833 2.333 31.5 7c9.333 4.667 19.333 7 30 7 7.336 0 14.67-1.333 22-4l-97-174 113-21c8.667-1.333 15.667-5 21-11s8-13.333 8-22-3.333-16.333-10-23c-6.668-6.667-14.335-10-23-10-2 0-3.333.333-4 1l-175 31c-7.333 2-13.5 7.167-18.5 15.5s-5.5 17.5-1.5 27.5l1 1.5 1 1.5 46 82-172 94z"/>
+                        </svg>
+                        <span class="margin-10-left">Piscine</span>
+                      </div>
+                      <div class="cell-3 flex flex-y-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="grey-icon" width="20" height="20"
+                             viewBox="0 0 203.344 203.344">
+                          <path
+                            d="M199.78 142.966H68.17a3.567 3.567 0 0 1-3.563-3.564v-82.5a3.567 3.567 0 0 1 3.563-3.563h131.61a3.567 3.567 0 0 1 3.563 3.563v82.5a3.566 3.566 0 0 1-3.563 3.564zm-36.471 26.039h-13.333v-16.039h-32v16.039h-13.334c-2.762 0-5 2.238-5 5s2.238 5 5 5h58.667a5 5 0 1 0 0-10zM79.844 43.338H68.17c-.73 0-1.441.074-2.141.186a4.959 4.959 0 0 0-1.279-.186H15.094c-2.762 0-5 2.238-5 5s2.238 5 5 5h40.004a13.484 13.484 0 0 0-.491 3.563v9.309H15.094c-2.762 0-5 2.238-5 5s2.238 5 5 5h39.513v12.873H15.094c-2.762 0-5 2.238-5 5s2.238 5 5 5h39.513v40.318c0 7.479 6.085 13.564 13.563 13.564h11.674v21.039a5 5 0 0 1-5 5H5a5 5 0 0 1-5-5V29.338a5 5 0 0 1 5-5h69.844a5 5 0 0 1 5 5v14zm-47.63 98.726a7.708 7.708 0 1 0 15.416 0 7.708 7.708 0 0 0-15.416 0z"/>
+                        </svg>
+                        <span class="margin-10-left">Ordinateur</span>
                       </div>
                     </div>
                     <span class="inline-block cursor-pointer hover-color-green-lagoon" @click="displayMore">
-                       <span>Afficher plus d'équipements </span>
-                    <svg viewBox="0 0 18 18" height="10px" width="10px">
-                      <path
-                        d="m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z"></path>
-                    </svg>
+                      <span>{{ moreEquipement }}</span>
+                      <span v-html="moreEquipementArrow"></span>
                     </span>
                   </div>
                 </div>
-
               </section>
 
               <section id="familyEquipments" class="tab-panel">
@@ -223,20 +164,6 @@
                     </svg>
                     <span class="margin-10-left">Baignoire bébé</span>
                   </div>
-                  <div class="cell-12">
-                    <div class="row margin-bottom" v-if="openMoreServices">
-                      <div class="cell-12-margin-0">
-                        coucou
-                      </div>
-                    </div>
-                    <span class="inline-block cursor-pointer hover-color-green-lagoon" @click="displayMore">
-                       <span>Afficher plus d'équipements </span>
-                    <svg viewBox="0 0 18 18" class="grey-icon" height="10px" width="10px">
-                      <path
-                        d="m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z"></path>
-                    </svg>
-                    </span>
-                  </div>
                 </div>
               </section>
 
@@ -266,6 +193,7 @@
 <script>
   // Tools
   import StarRatings from '../modules/StarRatings.vue'
+  import Presentation from '../layouts/Presentation'
   import vueSmoothScroll from 'vue-smooth-scroll'
   import Vue from 'vue'
   // Layouts
@@ -281,6 +209,7 @@
     components: {
       StarRatings,
       CarouselComponentDetailed,
+      Presentation,
       ModalReservation,
       Contact,
       MapLayout,
@@ -290,6 +219,7 @@
     data () {
       return {
         openMoreServices: false,
+        moreEquipement: 'Afficher plus d\'équipements ',
         persons: [],
         images: [],
         name: '',
@@ -303,9 +233,17 @@
       },
       displayMore () {
         this.openMoreServices = !this.openMoreServices
+        this.moreEquipement = this.openMoreServices ? 'Afficher moins d\'équipements ' : 'Afficher plus d\'équipements '
       },
       displayLess () {
         this.openMoreServices = false
+      }
+    },
+    computed: {
+      moreEquipementArrow: function () {
+        return '<svg viewBox="0 0 18 18" height="10px" width="10px">' +
+          '<path d="m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z"></path>' +
+          '</svg>'
       }
     },
     created () {
@@ -422,19 +360,6 @@
   .map-container {
     width: 100%;
     height: 50vh;
-  }
-
-  #add-to-favorites {
-    cursor: pointer;
-    vertical-align: top;
-  }
-
-  .grey-icon path {
-    fill: #404852;
-  }
-
-  #add-to-favorites:hover path {
-    fill: #789F8A;
   }
 
 </style>
